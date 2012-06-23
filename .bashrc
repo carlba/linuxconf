@@ -5,7 +5,7 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias vi vim
+alias vi='vim'
 
 export TERM=xterm-256color
 

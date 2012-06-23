@@ -11,10 +11,9 @@ export TERM=xterm-256color
 
 #git
 if [ -f /usr/bin/git ]
-then
-    echo $HOME
+then    
     git config --global user.name $USER@$HOSTNAME
-    git config --global user.email $USER@$HOSTNAME
+    git config --global user.email genzorg@gmail.comE
 else
     echo the file does not exist
 fi

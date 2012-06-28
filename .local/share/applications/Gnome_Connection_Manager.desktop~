@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Gnome Connection Manager
-Exec=/home/cada/gcm/gnome_connection_manager.py
-Comment=
-Icon=/home/cada/gcm/icon.png
-NoDisplay=false
-Type=Application
-Categories=Network;

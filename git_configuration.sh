@@ -1,4 +1,3 @@
-su cada
 yum -y install git
 git config --global user.name "carlba"
 git config --global user.email "genzorg@gmail.com"

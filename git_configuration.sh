@@ -6,6 +6,6 @@ git config --list
 cd ~
 git init
 git remote add origin https://github.com/carlba/linuxconf.git
-git pull
+git checkout -b user origin/user
 git reset --hard HEAD
 git pull

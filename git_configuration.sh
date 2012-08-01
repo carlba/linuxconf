@@ -7,3 +7,5 @@ cd ~
 git init
 git remote add origin https://github.com/carlba/linuxconf.git
 git pull
+git reset --hard HEAD
+git pull

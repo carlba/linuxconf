@@ -5,7 +5,7 @@ echo "==== Git Configuration ===="
 git config --list
 cd ~
 git init
-git remote add origin https://github.com/carlba/linuxconf.git
+git remote add origin https://github.com/carlba/linuxconf
 git checkout -b user origin/user
 git reset --hard HEAD
 git pull

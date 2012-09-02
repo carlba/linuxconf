@@ -1,6 +1,8 @@
 yum -y install git
 git config --global user.name "carlba"
 git config --global user.email "genzorg@gmail.com"
+git config --global http.sslVerify false
+
 echo "==== Git Configuration ===="
 git config --list
 cd ~

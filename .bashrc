@@ -22,3 +22,4 @@ cd ~
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
+alias tunneltowork='ssh -L 2222:10.10.11.200:22 cada@trillian.birdstep.com -N -f'

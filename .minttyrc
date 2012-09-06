@@ -1,3 +1,11 @@
-BoldAsFont=no
+BoldAsFont=yes
 FontSmoothing=full
 RightClickAction=paste
+Locale=
+Charset=
+BackspaceSendsBS=yes
+ClicksTargetApp=yes
+Columns=102
+Rows=60
+ScrollbackLines=100000
+Term=xterm-256color

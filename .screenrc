@@ -1,8 +1,14 @@
+# Disable the annoying startup message
+startup_message off
+
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
-
 
 #Configure screen to user 256 colors xterm correctly
 attrcolor b ".I"
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce "on"
+
+#Autostart certain screens
+screen -t bash
+screen -t Trillian ssh cada@trillian.birdstep.com

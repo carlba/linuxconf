@@ -53,8 +53,8 @@ filetype plugin indent on
 set grepprg=grep
 
 "Set Startup size of Vim
-set lines=50 
-set columns=120
+"set lines=50 
+"set columns=120
 
 "Fix so that mouse and key selection does a visual select instead of a replace
 "selet. This has the effect that it is possible to use commands such as indent (>) eventhough behavewin is active:

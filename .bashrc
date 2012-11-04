@@ -1,13 +1,5 @@
 # .bashrc
 
-
-# Keyboard shortcuts
-
-
-bind '"\e[5~": history-search-backward'
-bind '"\e[6~": history-search-forward'
-
-
 # User specific aliases and functions
 
 alias rm='rm -i'

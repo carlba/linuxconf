@@ -1,6 +1,8 @@
 yum -y install git
-git config --global user.name "user"
-git config --global user.email ""
+git config --global core.editor vi
+git config user.name "user"
+git config user.email ""
+
 echo "==== Git Configuration ===="
 git config --list
 cd ~

@@ -1,13 +1,12 @@
 yum -y install git
-git config --global user.name "carlba"
-git config --global user.email "genzorg@gmail.com"
-git config --global http.sslVerify false
+git config --global core.editor vi
+git config user.name "user"
+git config user.email ""
 
 echo "==== Git Configuration ===="
 git config --list
 cd ~
 git init
-git remote add origin https://github.com/carlba/linuxconf
-git checkout -b user origin/user
-git reset --hard HEAD
+git remote add origin https://github.com/carlba/linuxconf.git
 git pull
+git branch --set-upstream user origin/user

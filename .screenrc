@@ -1,3 +1,6 @@
+# Defaults to login-shell
+defshell -bash
+
 # Disable the annoying startup message
 startup_message off
 

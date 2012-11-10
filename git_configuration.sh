@@ -9,6 +9,7 @@ yum -y install git
 git config --global core.editor vim
 
 git init
-git remote add -t $1 origin https://github.com/carlba/linuxconf
-git pull 
-git checkout $1
+git remote add origin https://github.com/carlba/linuxconf
+git fetch
+git checkout -t origin/$1
+git branch -aav

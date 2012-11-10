@@ -31,12 +31,15 @@ dbg "$0 $*"
 # We only care if we are in a terminal
 tty -s
 
+
+# I removed the below part since the term variable was not screen.
+
 # We also only care if we are in screen, which we infer by $TERM starting
 # with "screen"
-if [ "${TERM:0:6}" != "screen" ]; then
-  dbg "Not a screen session, ${TERM:0:5} != 'screen'"
-  exit
-fi
+#if [ "${TERM:0:6}" != "screen" ]; then
+#  dbg "Not a screen session, ${TERM:0:5} != 'screen'"
+#  exit
+#fi
 
 # We must be given two arguments - our parent process and a hostname
 # (which may be "%n" if we are being called by an older SSH)

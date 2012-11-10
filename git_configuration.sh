@@ -1,12 +1,14 @@
-yum -y install git
-git config --global core.editor vi
-git config user.name "user"
-git config user.email ""
+if [ -z "$1" ];
+then
+    echo "Plese enter a parameter when launching the script"
+    exit
+fi
 
-echo "==== Git Configuration ===="
-git config --list
-cd ~
+yum -y install git
+
+git config --global core.editor vim
+
 git init
-git remote add origin https://github.com/carlba/linuxconf.git
-git pull
-git branch --set-upstream user origin/user
+git remote add -t $1 origin https://github.com/carlba/linuxconf
+git pull 
+git checkout $1

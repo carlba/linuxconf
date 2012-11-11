@@ -1,0 +1,3 @@
+[submodule ".vim/plugin/simplenote.vim"]
+	path = .vim/plugin/simplenote.vim
+	url = https://github.com/mrtazz/simplenote.vim.git

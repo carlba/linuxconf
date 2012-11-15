@@ -10,14 +10,14 @@ in_array() {
     return 1
 }
 
-array=(.bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .. .git) 
+ignorefiles=(.bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .. .git) 
 
 if in_array xfce ${desktop_managers[*]}; then
-  array+=(".mateconf")
+  ignorefiles+=(".mateconf")
 fi
 
 if in_array mate ${desktop_managers[*]}; then
-  #array+=(".")
+  #ignorefiles+=(".")
   echo "Inarray mate"
 fi
 
@@ -36,8 +36,7 @@ fi
 echo "Going through all files in the dotfiles dir."
 for f in $(find ../ -name '*' -maxdepth 1)
 do
-
-  if ! in_array $(basename $f) ${array[*]}; then
+  if ! in_array $(basename $f) ${ignorefiles[*]}; then
     if [ -f ~/$(basename $f) ] || [ -d ~/$(basename $f) ]; then
       while
       echo "~/$(basename $f) Already exists. Overwrite y/n?"

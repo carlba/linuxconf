@@ -38,7 +38,6 @@ for f in $(find ../ -name '*' -maxdepth 1)
 do
   if ! in_array $(basename $f) ${ignorefiles[*]}; then
     if [ -f ~/$(basename $f) ] || [ -d ~/$(basename $f) ]; then
-      while
       echo "~/$(basename $f) Already exists. Overwrite y/n?"
       read answer
       case "$answer" in

@@ -54,11 +54,12 @@ do
 
           ;;
       esac
-      echo $(basename $f)
-      ln -s ~/dotfiles/$(basename $f) ~/$(basename $f)
-      echo ~/dotfiles/$(basename $f)
-      echo ~/$(basename $f)
-    fi    
+    fi
+    echo $(basename $f)
+    ln -s ~/dotfiles/$(basename $f) ~/$(basename $f)
+    echo ~/dotfiles/$(basename $f)
+    echo ~/$(basename $f)
+    
   fi
 
 done

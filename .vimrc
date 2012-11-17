@@ -1,3 +1,4 @@
+call pathogen#infect()
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
@@ -70,5 +71,4 @@ set wildmenu
 
 :amenu &Calle.&Fold\ Apache-config<Tab><F1> <F1><CR>
 
-call pathogen#infect()
 

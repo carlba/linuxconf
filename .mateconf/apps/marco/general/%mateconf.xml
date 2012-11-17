@@ -3,7 +3,7 @@
 	<entry name="titlebar_font" mtime="1352833057" type="string">
 		<stringvalue>DejaVu Sans 8</stringvalue>
 	</entry>
-	<entry name="theme" mtime="1352833116" type="string">
-		<stringvalue>Mint-X</stringvalue>
+	<entry name="theme" mtime="1353159397" type="string">
+		<stringvalue>MurrineRounded</stringvalue>
 	</entry>
 </mateconf>

@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/simplenote"]
 	path = .vim/bundle/simplenote
 	url = https://github.com/mrtazz/simplenote.vim.git
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git

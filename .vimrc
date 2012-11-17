@@ -2,6 +2,7 @@ call pathogen#infect()
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
+source ~/.simplenoterc
 behave mswin
 
 set diffexpr=MyDiff()
@@ -68,7 +69,7 @@ map <F1> :set fdm=expr<CR>:set fde=getline(v:lnum)=~'^\\s*#'?1:getline(prevnonbl
 
 set wildmenu
 
-
 :amenu &Calle.&Fold\ Apache-config<Tab><F1> <F1><CR>
 
-
+"Toggle tagbar by default
+au VimEnter * TagbarOpen

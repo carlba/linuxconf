@@ -28,7 +28,7 @@ fi
 
 if [[ $linuxenv == cygwin ]]
 then
-  ignorefiles+=(.xchat2 .mateconf .config .local)
+  ignorefiles+=(.xchat2 .mateconf .config .local Desktop)
 fi
 echo ${ignorefiles[*]}
 # Source my own .bashrc after the systemone if it exists otherwise symlink the dotfiles one to the homedir.

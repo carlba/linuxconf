@@ -10,7 +10,7 @@ in_array() {
     return 1
 }
 
-ignorefiles=(.bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .. .git) 
+ignorefiles=(.bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .. .git .ssh) 
 
 if in_array xfce ${desktop_managers[*]}; then
   ignorefiles+=(".mateconf")

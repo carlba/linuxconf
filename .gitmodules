@@ -1,3 +1,6 @@
 [submodule "vim"]
 	path = vim
 	url = https://github.com/carlba/vimfiles.git
+[submodule ".vim/bundle/simplenote"]
+	path = .vim/bundle/simplenote
+	url = https://github.com/mrtazz/simplenote.vim.git

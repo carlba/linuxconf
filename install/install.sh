@@ -21,7 +21,16 @@ if in_array mate ${desktop_managers[*]}; then
   echo "Inarray mate"
 fi
 
+if [[ $(uname -a) == *CYGWIN* ]]; then
+  linuxenv=cygwin
+  echo $linuxenv
+fi
 
+if [[ $linuxenv == cygwin ]]
+then
+  ignorefiles+=(.xchat2 .mateconf .config .local)
+fi
+echo ${ignorefiles[*]}
 # Source my own .bashrc after the systemone if it exists otherwise symlink the dotfiles one to the homedir.
 
 if grep -q "#Template .bashrc" ~/.bashrc; then

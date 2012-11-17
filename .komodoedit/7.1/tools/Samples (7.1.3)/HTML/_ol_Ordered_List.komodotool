@@ -1,0 +1,11 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "<ol> Ordered List", 
+  "value": [
+    "<ol><li>[[%(w:else:)]]!@#_currentPos!@#_anchor</li></ol>"
+  ], 
+  "set_selection": "true", 
+  "version": "1.0.7", 
+  "type": "snippet", 
+  "indent_relative": "true"
+}

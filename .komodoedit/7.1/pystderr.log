@@ -1,0 +1,3 @@
+WARNING:xpcom:Warning: failed to inspect interface nsIBufEntropyCollector for [function] flag
+[2012-11-17 22:22:09,309] [WARNING] root: ko.findresults was already loaded, re-creating it.
+

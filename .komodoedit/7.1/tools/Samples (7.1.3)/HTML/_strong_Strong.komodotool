@@ -1,0 +1,11 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "<strong> Strong", 
+  "value": [
+    "<strong>[[%(w:else:)]]!@#_currentPos!@#_anchor</strong>"
+  ], 
+  "set_selection": "true", 
+  "version": "1.0.7", 
+  "type": "snippet", 
+  "indent_relative": "true"
+}

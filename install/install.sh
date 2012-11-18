@@ -1,3 +1,10 @@
+# Git
+
+# Update repo and all submodules
+cd ~/dotfiles
+git pull && git submodule update --init --recursive
+cd ~/dotfiles/install
+
 desktop_managers=($(find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop ";"))
 echo ${desktop_managers[*]}
 

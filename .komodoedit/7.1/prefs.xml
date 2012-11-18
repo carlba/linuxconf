@@ -96,7 +96,7 @@
   <long id="isearchHighlightTimeout">35</long>
   <boolean id="isearchKeysToEditor">0</boolean>
   <string id="isearchType">0</string>
-  <boolean id="komodo_normal_shutdown">1</boolean>
+  <boolean id="komodo_normal_shutdown">0</boolean>
 <preference-set id="languages">
 <preference-set id="languages/Ada">
   <boolean id="Ada/newBOM">0</boolean>
@@ -261,7 +261,7 @@
 <preference-set id="places">
 <preference-set id="current_filter_by_uri">
 <preference-set id="file:///home/cada">
-  <string id="timestamp">1353187755848</string>
+  <string id="timestamp">1353257020746</string>
   <string id="viewName">Default</string>
 </preference-set>
 </preference-set>
@@ -295,7 +295,7 @@
 </ordered-preference>
   <string id="lastHomePlace">file:///home/cada</string>
   <string id="lastLocalDirectoryChoice">file:///home/cada</string>
-  <string id="places-open-nodes-v2">{"file:///home/cada": 1353187755.8077641}</string>
+  <string id="places-open-nodes-v2">{"file:///home/cada": 1353257020.6915431}</string>
   <long id="project_sort_direction">0</long>
   <boolean id="showProjectPath">0</boolean>
   <boolean id="showProjectPathExtension">0</boolean>
@@ -346,9 +346,9 @@
   <long id="tabWidth">4</long>
   <long id="toolbox-open-nodes-size">100</long>
 <preference-set id="toolbox2">
-  <long id="currentIndex">0</long>
+  <long id="currentIndex">1</long>
   <long id="firstVisibleRow">0</long>
-  <string id="open-nodes">{"/home/cada/Komodo-Edit-7/lib/mozilla/extensions/stackatotools@activestate.com/tools": 1353187755.099031, "/home/cada/Komodo-Edit-7/lib/mozilla/extensions/stackatotools@activestate.com/tools/Snippets": 1353174550.865253, "/home/cada/.komodoedit/7.1/tools": 1353187755.097307}</string>
+  <string id="open-nodes">{"/home/cada/Komodo-Edit-7/lib/mozilla/extensions/stackatotools@activestate.com/tools": 1353257152.329545, "/home/cada/.komodoedit/7.1/tools/Python": 1353257186.6649899, "/home/cada/.komodoedit/7.1/tools": 1353257152.328028}</string>
   <string id="sortDirection">natural</string>
 </preference-set>
   <string id="ui.tabs.sidepanes.bottom.layout">horizontal</string>
@@ -360,7 +360,7 @@
 <preference-set id="windowWorkspace">
 <preference-set id="1">
 <preference-set id="coordinates">
-  <long id="outerHeight">825</long>
+  <long id="outerHeight">764</long>
   <long id="outerWidth">1187</long>
   <long id="screenX">0</long>
   <long id="screenY">0</long>
@@ -375,7 +375,7 @@
   <string id="spv_projects">[]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1353187761</long>
+  <long id="timestamp">1353257237</long>
   <string id="uilayout_bottomTabBoxSelectedTabId">runoutput-desc-tabpanel</string>
   <boolean id="uilayout_bottomTabBox_collapsed">0</boolean>
   <string id="uilayout_leftTabBoxSelectedTabId">placesViewbox</string>

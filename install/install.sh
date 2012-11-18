@@ -35,9 +35,16 @@ fi
 
 if [[ $linuxenv == cygwin ]]
 then
-  ignorefiles+=(.xchat2 .mateconf .config .local Desktop)
+  ignorefiles+=(.xchat2 .mateconf .config .local Desktop .komodoedit) 
 fi
-echo ${ignorefiles[*]}
+
+# cli mode preset (preset for commandline)
+if [ $1 == climode ]; then
+  ignorefiles+=(.xchat2 .mateconf .config .local Desktop .komodoedit)
+fi
+
+echo "The contents of the ignorefiles array: ${ignorefiles[*]}"
+
 # Source my own .bashrc after the systemone if it exists otherwise symlink the dotfiles one to the homedir.
 
 if grep -q "#Template .bashrc" ~/.bashrc; then

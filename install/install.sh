@@ -72,3 +72,11 @@ do
   fi
 
 done
+
+#Dependencies
+
+#Vim TabBar
+sudo apt-get install ctags
+
+
+

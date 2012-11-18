@@ -1,77 +1,136 @@
 <?xml version="1.0"?>
 <RDF:RDF xmlns:NC="http://home.netscape.com/NC-rdf#"
          xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <RDF:Description RDF:about="chrome://help/content/help.xul">
-    <NC:persist RDF:resource="chrome://help/content/help.xul#help"/>
+  <RDF:Description RDF:about="chrome://komodo/content/project/simplePartProperties.xul#dialog-simplepartproperties"
+                   screenX="144"
+                   screenY="15" />
+  <RDF:Description RDF:about="about:config#valueCol"
+                   ordinal="7" />
+  <RDF:Description RDF:about="chrome://komodo/content/run/commandproperties.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/run/commandproperties.xul#dialog-command-properties"/>
   </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/pref/project.xul">
-    <NC:persist RDF:resource="chrome://komodo/content/pref/project.xul#prefProjectsWindow"/>
+  <RDF:Description RDF:about="chrome://komodo/content/run/commandproperties.xul#dialog-command-properties"
+                   screenX="359"
+                   screenY="103" />
+  <RDF:Description RDF:about="about:config">
+    <NC:persist RDF:resource="about:config#prefCol"/>
+    <NC:persist RDF:resource="about:config#lockCol"/>
+    <NC:persist RDF:resource="about:config#typeCol"/>
+    <NC:persist RDF:resource="about:config#valueCol"/>
   </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#komodo_main"
-                   width="1356"
-                   height="730"
-                   screenX="0"
-                   screenY="0" />
+  <RDF:Description RDF:about="chrome://komodo/content/run/run.xul#run-window"
+                   screenX="517"
+                   screenY="153" />
   <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#workspace_bottom_area"
                    type="horizontal"
                    collapsed="false"
                    height="196" />
+  <RDF:Description RDF:about="chrome://komodo/content/pref/pref.xul#prefWindow"
+                   width="836"
+                   height="651"
+                   screenX="337"
+                   screenY="61" />
+  <RDF:Description RDF:about="about:config#typeCol"
+                   ordinal="5" />
   <RDF:Description RDF:about="chrome://komodo/content/find/find2.xul#find2-window"
                    screenX="650"
                    screenY="401" />
-  <RDF:Description RDF:about="chrome://komodo/content/run/commandproperties.xul#dialog-command-properties"
-                   screenX="359"
-                   screenY="103" />
-  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul">
-    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#addons-page"/>
-  </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/run/commandproperties.xul">
-    <NC:persist RDF:resource="chrome://komodo/content/run/commandproperties.xul#dialog-command-properties"/>
-  </RDF:Description>
-  <RDF:Description RDF:about="chrome://fastopen/content/gotofile.xul">
-    <NC:persist RDF:resource="chrome://fastopen/content/gotofile.xul#dialog-gotofile"/>
-  </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/run/run.xul">
-    <NC:persist RDF:resource="chrome://komodo/content/run/run.xul#run-window"/>
-  </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/project/snippetProperties.xul">
-    <NC:persist RDF:resource="chrome://komodo/content/project/snippetProperties.xul#dialog-snippetproperties"/>
-  </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/project/simplePartProperties.xul#dialog-simplepartproperties"
-                   screenX="144"
-                   screenY="15" />
-  <RDF:Description RDF:about="chrome://help/content/help.xul#help"
-                   screenX="190"
-                   screenY="115"
-                   width="858"
-                   height="642" />
-  <RDF:Description RDF:about="chrome://komodo/content/dialogs/featureControlPanel.xul#dialog-featurecontrolpanel"
-                   screenX="257"
-                   screenY="245" />
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#search-filter-radiogroup"
+                   value="local" />
+  <RDF:Description RDF:about="about:config#prefCol"
+                   ordinal="1"
+                   sortDirection="ascending" />
   <RDF:Description RDF:about="chrome://komodo/content/dialogs/selectFromList.xul#dialog_selectFromList"
                    screenX="20"
                    screenY="20"
                    width="400"
                    height="350" />
-  <RDF:Description RDF:about="chrome://komodo/content/dialogs/selectFromList.xul">
-    <NC:persist RDF:resource="chrome://komodo/content/dialogs/selectFromList.xul#dialog_selectFromList"/>
-  </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#workspace_left_area"
-                   type="vertical"
-                   collapsed="true"
-                   width="0" />
-  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#widekeyset"
-                   persisted_kb="true" />
-  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#addons-page"
-                   width="1307"
-                   height="713" />
   <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#workspace_right_area"
                    type="vertical"
                    collapsed="false"
                    width="341" />
+  <RDF:Description RDF:about="chrome://komodo/content/pref/project.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/pref/project.xul#prefProjectsWindow"/>
+  </RDF:Description>
   <RDF:Description RDF:about="chrome://komodo/content/project/simplePartProperties.xul">
     <NC:persist RDF:resource="chrome://komodo/content/project/simplePartProperties.xul#dialog-simplepartproperties"/>
   </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/dialogs/selectFromList.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/dialogs/selectFromList.xul#dialog_selectFromList"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#komodo_main"
+                   width="1356"
+                   height="730"
+                   screenX="38"
+                   screenY="87" />
+  <RDF:Description RDF:about="chrome://komodo/content/project/snippetProperties.xul#dialog-snippetproperties"
+                   screenX="538"
+                   screenY="229"
+                   width="443"
+                   height="329" />
+  <RDF:Description RDF:about="chrome://mozapps/content/handling/dialog.xul#handling"
+                   screenX="598"
+                   screenY="255"
+                   width="323"
+                   height="277" />
+  <RDF:Description RDF:about="chrome://komodo/content/project/snippetProperties.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/project/snippetProperties.xul#dialog-snippetproperties"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/project/macroProperties.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/project/macroProperties.xul#dialog-macroproperties"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/find/find2.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/find/find2.xul#find2-window"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul">
+    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#addons-page"/>
+    <NC:persist RDF:resource="chrome://mozapps/content/extensions/extensions.xul#search-filter-radiogroup"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/dialogs/featureControlPanel.xul#dialog-featurecontrolpanel"
+                   screenX="257"
+                   screenY="245" />
+  <RDF:Description RDF:about="chrome://help/content/help.xul#help"
+                   width="858"
+                   height="642"
+                   screenX="770"
+                   screenY="136" />
+  <RDF:Description RDF:about="chrome://komodo/content/dialogs/featureControlPanel.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/dialogs/featureControlPanel.xul#dialog-featurecontrolpanel"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://help/content/help.xul">
+    <NC:persist RDF:resource="chrome://help/content/help.xul#help"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://mozapps/content/extensions/extensions.xul#addons-page"
+                   width="1307"
+                   height="713" />
+  <RDF:Description RDF:about="chrome://fastopen/content/gotofile.xul#dialog-gotofile"
+                   width="500"
+                   height="400" />
+  <RDF:Description RDF:about="chrome://komodo/content/pref/pref.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/pref/pref.xul#prefWindow"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#widekeyset"
+                   persisted_kb="true" />
+  <RDF:Description RDF:about="chrome://mozapps/content/handling/dialog.xul">
+    <NC:persist RDF:resource="chrome://mozapps/content/handling/dialog.xul#handling"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/run/run.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/run/run.xul#run-window"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/dialogs/iconpicker.xul">
+    <NC:persist RDF:resource="chrome://komodo/content/dialogs/iconpicker.xul#dialog-iconpicker"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/dialogs/iconpicker.xul#dialog-iconpicker"
+                   screenX="9"
+                   screenY="103"
+                   width="451"
+                   height="350" />
+  <RDF:Description RDF:about="chrome://komodo/content/komodo.xul#workspace_left_area"
+                   type="vertical"
+                   collapsed="true"
+                   width="0" />
+  <RDF:Description RDF:about="about:config#lockCol"
+                   ordinal="3" />
   <RDF:Description RDF:about="chrome://komodo/content/komodo.xul">
     <NC:persist RDF:resource="chrome://komodo/content/komodo.xul#workspace_right_area"/>
     <NC:persist RDF:resource="chrome://komodo/content/komodo.xul#workspace_left_area"/>
@@ -79,34 +138,17 @@
     <NC:persist RDF:resource="chrome://komodo/content/komodo.xul#widekeyset"/>
     <NC:persist RDF:resource="chrome://komodo/content/komodo.xul#komodo_main"/>
   </RDF:Description>
+  <RDF:Description RDF:about="chrome://fastopen/content/gotofile.xul">
+    <NC:persist RDF:resource="chrome://fastopen/content/gotofile.xul#dialog-gotofile"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://komodo/content/project/macroProperties.xul#dialog-macroproperties"
+                   screenX="483"
+                   screenY="93"
+                   width="553"
+                   height="600" />
   <RDF:Description RDF:about="chrome://komodo/content/pref/project.xul#prefProjectsWindow"
                    screenX="657"
                    screenY="141"
                    width="598"
                    height="576" />
-  <RDF:Description RDF:about="chrome://komodo/content/run/run.xul#run-window"
-                   screenX="717"
-                   screenY="406" />
-  <RDF:Description RDF:about="chrome://komodo/content/find/find2.xul">
-    <NC:persist RDF:resource="chrome://komodo/content/find/find2.xul#find2-window"/>
-  </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/pref/pref.xul">
-    <NC:persist RDF:resource="chrome://komodo/content/pref/pref.xul#prefWindow"/>
-  </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/dialogs/featureControlPanel.xul">
-    <NC:persist RDF:resource="chrome://komodo/content/dialogs/featureControlPanel.xul#dialog-featurecontrolpanel"/>
-  </RDF:Description>
-  <RDF:Description RDF:about="chrome://komodo/content/pref/pref.xul#prefWindow"
-                   width="836"
-                   height="651"
-                   screenX="337"
-                   screenY="61" />
-  <RDF:Description RDF:about="chrome://komodo/content/project/snippetProperties.xul#dialog-snippetproperties"
-                   screenX="538"
-                   screenY="229"
-                   width="443"
-                   height="329" />
-  <RDF:Description RDF:about="chrome://fastopen/content/gotofile.xul#dialog-gotofile"
-                   width="500"
-                   height="400" />
 </RDF:RDF>

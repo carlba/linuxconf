@@ -1,3 +1,6 @@
 *~
 .netrwhist
 codeintel*
+*.log
+*.tmp
+*.bak

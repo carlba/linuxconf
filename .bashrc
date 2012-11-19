@@ -20,5 +20,11 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# Aliases
-alias tunneltowork='ssh -L 2222:10.10.11.200:22 cada@trillian.birdstep.com -N -f'
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/dotfiles/.bash_aliases ]; then
+    . ~/dotfiles/.bash_aliases
+fi

@@ -11,7 +11,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias vi='vim'
 
-export TERM=xterm-256color
 
 PS1="[\\u@\\h:\\w] $"
 
@@ -27,4 +26,9 @@ fi
 
 if [ -f ~/dotfiles/.bash_aliases ]; then
     . ~/dotfiles/.bash_aliases
+fi
+# Start tmux if it isn't already running
+if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ]; then
+    export TERM=xterm-256color
+    tmux attach || tmux new; exit
 fi

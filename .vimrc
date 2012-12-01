@@ -33,6 +33,8 @@ endfunction
 
 "mystuff
 
+set t_Co=256
+
 colorscheme zenburn
 
 if has("gui_running")

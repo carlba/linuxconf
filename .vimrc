@@ -39,15 +39,6 @@ set t_Co=256
 
 colorscheme zenburn
 
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
-  elseif has("gui_win32")
-    set guifont=Consolas:h8:cANSI    
-  set guioptions-=T  "remove toolbar    
-  endif
-endif
-
 set tabstop=4
 set shiftwidth=4
 set expandtab

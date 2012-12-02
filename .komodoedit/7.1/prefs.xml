@@ -15,7 +15,7 @@
   <boolean id="codeintel_highlight_variables_use_scope">1</boolean>
   <string id="cursorColor">#eee8d5</string>
   <boolean id="dedentOnColon">1</boolean>
-  <string id="defaultSelectedPref">perfectPythonItem</string>
+  <string id="defaultSelectedPref">pythonItem</string>
   <string id="defaultSelectedSubPref">languagesItem</string>
   <string id="donotask_action_close_deleted_files"></string>
   <string id="donotask_action_dragdrop_uri"></string>
@@ -56,6 +56,7 @@
   <string id="filtered-prefs-open-nodes-by-id">{"editorItem":true,"editorProperties":true,"languagesItem":true,"syntaxCheckingItem":true}</string>
   <long id="find-caseSensitivity">1</long>
   <boolean id="find-confirmReplacementsInFiles">1</boolean>
+  <string id="find-cwd">~</string>
   <boolean id="find-displayInFindResults2">0</boolean>
 <ordered-preference id="find-excludeFiletypes">
   <string>.svn</string>
@@ -65,16 +66,27 @@
   <string>.bzr</string>
   <string>*~</string>
 </ordered-preference>
+<ordered-preference id="find-excludeFiletypesMru">
+  <string>.svn:CVS:.git:.hg:.bzr:*~</string>
+</ordered-preference>
 <ordered-preference id="find-folders">
-  <string></string>
+  <string>dotfiles</string>
+</ordered-preference>
+<ordered-preference id="find-foldersMru">
+  <string>dotfiles</string>
 </ordered-preference>
   <boolean id="find-highlightEnabled">1</boolean>
   <long id="find-highlightTimeout">1000</long>
 <ordered-preference id="find-includeFiletypes">
 </ordered-preference>
+  <string id="find-lastInFilesContext">files</string>
   <boolean id="find-matchWord">0</boolean>
   <boolean id="find-multiline">0</boolean>
 <ordered-preference id="find-patternMru">
+  <string>print</string>
+  <string>&#229;</string>
+  <string>bash</string>
+  <string>extra</string>
   <string>array</string>
 </ordered-preference>
   <long id="find-patternType">0</long>
@@ -103,7 +115,7 @@
   <string id="jslintOptions"></string>
   <string id="jslint_linter_chooser">default</string>
   <string id="jslint_linter_specific"></string>
-  <boolean id="komodo_normal_shutdown">1</boolean>
+  <boolean id="komodo_normal_shutdown">0</boolean>
 <preference-set id="languages">
 <preference-set id="languages/Ada">
   <boolean id="Ada/newBOM">0</boolean>
@@ -280,7 +292,20 @@
   <boolean id="lint_python_with_pylint">0</boolean>
   <boolean id="lint_python_with_standard_python">0</boolean>
 <ordered-preference id="mruFileList">
-  <string>file:///home/cada/python/test.py</string>
+  <string>file:///home/cada/python/test.txt</string>
+  <string>file:///home/cada/.komodoedit/7.1/tools/Python/Python_Run.komodotool</string>
+  <string>file:///home/cada/dotfiles/.bashrc</string>
+  <string>sftp://florina/opt/ems30/src/webroot/admin/manage_tests.php</string>
+  <string>sftp://florina/opt/ems30/src/templates/pc/admin/manage_tests_header.html</string>
+  <string>sftp://florina/opt/ems30/src/templates/pc/admin/manage_tests_result.html</string>
+  <string>sftp://florina/opt/ems30/src/classes/Test.php</string>
+  <string>sftp://florina/opt/ems30/src/db/structure/db_01_025_dms_log_solicits_hardware.sql</string>
+  <string>sftp://florina/opt/ems30/src/db/upgrade_3.0.0.87.sql</string>
+  <string>sftp://florina/opt/ems30/src/db/structure/db_01_023_dms_log_solicits_extra.sql</string>
+  <string>sftp://florina/opt/ems30/src/db/structure/db_01_022_dms_log_solicits_device_model.sql</string>
+  <string>sftp://florina/opt/ems30/src/db/structure/db_01_024_dms_log_solicits_guid.sql</string>
+  <string>sftp://florina/opt/ems30/src/db/structure/db_01_037_dms_log_solicits_username.sql</string>
+  <string>sftp://florina/opt/ems30/src/db/structure/db_01_036_dms_log_solicits_ssid.sql</string>
   <string>file:///home/cada/test.rb</string>
   <string>file:///home/cada/.komodoedit/7.1/tools/Samples%2520%25287.1.3%2529/Run.komodotool</string>
   <string>file:///home/cada/python/testsublime.py</string>
@@ -294,9 +319,22 @@
   <boolean id="perl_lintOption_includeCurrentDirForLinter">1</boolean>
   <string id="perl_lintOption_perlCriticLevel">off</string>
 <preference-set id="places">
+  <string id="1">file:///home/cada</string>
 <preference-set id="current_filter_by_uri">
+<preference-set >
+  <string id="timestamp">1354143979349</string>
+  <string id="viewName">Default</string>
+</preference-set>
 <preference-set id="file:///home/cada">
-  <string id="timestamp">1353259709246</string>
+  <string id="timestamp">1354218318619</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="sftp://florina/opt/ems30">
+  <string id="timestamp">1353975332917</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="sftp://florina/opt/ems30/src/db/structure">
+  <string id="timestamp">1353489648456</string>
   <string id="viewName">Default</string>
 </preference-set>
 </preference-set>
@@ -327,10 +365,12 @@
 <ordered-preference id="history_forwardPlaces">
 </ordered-preference>
 <ordered-preference id="history_prevPlaces">
+  <string>sftp://florina/opt/ems30</string>
 </ordered-preference>
   <string id="lastHomePlace">file:///home/cada</string>
   <string id="lastLocalDirectoryChoice">file:///home/cada</string>
-  <string id="places-open-nodes-v2">{"file:///home/cada": 1353259709.2024939}</string>
+  <string id="lastRemoteDirectoryChoice">sftp://florina/</string>
+  <string id="places-open-nodes-v2">{"sftp://florina/opt/ems30/src/templates/pc/admin": 1353624890.574295, "file:///home/cada": 1354145756.3078451, "sftp://florina/opt/ems30/src": 1353417093.4393439, "sftp://florina/opt/ems30/src/classes": 1353625277.039253, "sftp://florina/opt/ems30/src/webroot": 1353624802.6000531, "sftp://florina/opt/ems30": 1354143754.55742, "file:///home/cada/python": 1354145533.369019, "sftp://florina/opt/ems30/src/templates/pc": 1353624888.9460199, "sftp://florina/": 1354143758.121855, "sftp://florina/opt/ems30/src/webroot/admin": 1353624818.8547001}</string>
   <long id="project_sort_direction">0</long>
   <boolean id="showProjectPath">0</boolean>
   <boolean id="showProjectPathExtension">0</boolean>
@@ -341,7 +381,7 @@
 </preference-set>
   <long id="places-open-nodes-size">100</long>
   <boolean id="places.multiple_project_view">0</boolean>
-  <boolean id="pplint-0-6-5.pep8.enabled">1</boolean>
+  <boolean id="pplint-0-6-5.pep8.enabled">0</boolean>
   <string id="pplint-0-6-5.pep8.maxLineLength">120</string>
   <boolean id="pplint-0-6-5.pyflakes.enabled">1</boolean>
   <boolean id="pplint-0-6-5.pylint.enabled">1</boolean>
@@ -369,13 +409,20 @@
   <string id="python3ExtraPaths"></string>
   <string id="pythonDefaultInterpreter"></string>
   <string id="pythonExtraPaths"></string>
+  <long id="remotefiles_defaultConnectionTimeout">30</long>
   <string id="ruby_lintOption">cwT</string>
 <ordered-preference id="run-commandMru">
+  <string>%25(python) -u "%25F"</string>
+  <string>%25(python) -u %25"F"</string>
+  <string>python -u %25"F"</string>
   <string>%25(python) -u %25F</string>
   <string>python %25F</string>
   <string>python %25F {'insertOutput': True, 'operateOnSelection': True}</string>
 </ordered-preference>
 <ordered-preference id="run-commandStringMru">
+  <string>%25(python) -u "%25F"</string>
+  <string>%25(python) -u %25"F"</string>
+  <string>python -u %25"F"</string>
   <string>%25(python) -u %25F</string>
   <string>python %25F</string>
 </ordered-preference>
@@ -404,7 +451,7 @@
 <preference-set id="toolbox2">
   <long id="currentIndex">2</long>
   <long id="firstVisibleRow">0</long>
-  <string id="open-nodes">{"/home/cada/.komodoedit/7.1/tools": 1353259708.5146749, "/home/cada/Komodo-Edit-7/lib/mozilla/extensions/stackatotools@activestate.com/tools": 1353259708.5159919, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)/Abbreviations/General": 1353258566.0640659, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)/Abbreviations": 1353261016.796982, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)/Abbreviations/Python-common/Python": 1353258511.054306, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)/Abbreviations/Python-common/Python3": 1353258515.0872641}</string>
+  <string id="open-nodes">{"/home/cada/.komodoedit/7.1/tools": 1354145755.634254, "/home/cada/Komodo-Edit-7/lib/mozilla/extensions/stackatotools@activestate.com/tools": 1354145755.6353381, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)/Abbreviations/General": 1353258566.0640659, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)": 1353865859.078047, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)/Abbreviations": 1353261016.796982, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)/Abbreviations/Python-common/Python": 1353258511.054306, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)/Abbreviations/Python-common/Python3": 1353258515.0872641, "/home/cada/.komodoedit/7.1/tools/Samples (7.1.3)/Abbreviations/Python-common": 1353865863.3009939, "/home/cada/.komodoedit/7.1/tools/Python": 1353534425.8846779}</string>
   <string id="sortDirection">natural</string>
 </preference-set>
   <string id="ui.tabs.sidepanes.bottom.layout">horizontal</string>
@@ -416,51 +463,26 @@
 <preference-set id="windowWorkspace">
 <preference-set id="1">
 <preference-set id="coordinates">
-  <long id="outerHeight">730</long>
-  <long id="outerWidth">1356</long>
-  <long id="screenX">38</long>
-  <long id="screenY">87</long>
+  <long id="outerHeight">930</long>
+  <long id="outerWidth">1308</long>
+  <long id="screenX">608</long>
+  <long id="screenY">21</long>
   <long id="windowState">3</long>
 </preference-set>
   <boolean id="hasFocus">1</boolean>
 <preference-set id="history_rctabs">
-  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"macro2://281/Run_the_current_Macro.js","tabIndex":2},{"tabGroup":"view-1","viewType":"browser","uri":"about:config","tabIndex":2}]</string>
+  <string id="rctabs_list">[]</string>
 </preference-set>
 <preference-set id="opened_projects_v7">
   <string id="mpv_projects">[]</string>
   <string id="spv_projects">[]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1353262303</long>
-<preference-set id="topview">
-<ordered-preference id="childState">
-<preference-set >
-  <long id="current_view_index">1</long>
-<ordered-preference id="view_prefs">
-<preference-set >
-  <string id="URI">file:///home/cada/python/test.py</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set >
-  <string id="URI">file:///home/cada/test.rb</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-</ordered-preference>
-</preference-set>
-</ordered-preference>
-  <string id="orientation">vertical</string>
-<ordered-preference id="viewHistoryState">
-  <string>file:///home/cada/python/test.py?parentId=view-1</string>
-  <string>macro2://297/Run.js?parentId=view-1</string>
-  <string>file:///home/cada/test.rb?parentId=view-1</string>
-  <string>macro2://281/Run_the_current_Macro.js?parentId=view-1</string>
-  <string>chrome://komodo/content/startpage/startpage.xml#view-startpage?parentId=view-1</string>
-</ordered-preference>
-</preference-set>
+  <long id="timestamp">1354393305</long>
   <string id="uilayout_bottomTabBoxSelectedTabId">runoutput-desc-tabpanel</string>
   <boolean id="uilayout_bottomTabBox_collapsed">0</boolean>
   <string id="uilayout_leftTabBoxSelectedTabId">placesViewbox</string>
-  <boolean id="uilayout_leftTabBox_collapsed">1</boolean>
+  <boolean id="uilayout_leftTabBox_collapsed">0</boolean>
   <string id="uilayout_rightTabBoxSelectedTabId">toolbox2viewbox</string>
   <boolean id="uilayout_rightTabBox_collapsed">0</boolean>
   <string id="uilayout_widget_position_NST-viewbox">workspace_right_area</string>

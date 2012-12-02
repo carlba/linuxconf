@@ -6,7 +6,7 @@
   "name": "Python Run", 
   "operateOnSelection": 0, 
   "value": [
-    "%(python) -u %F"
+    "%(python) -u \"%F\""
   ], 
   "parseOutput": 0, 
   "version": "1.0.7", 

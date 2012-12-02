@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Gnome Connection Manager
-Exec=/usr/bin/gcm/gnome_connection_manager.py
-Comment=
-Icon=/usr/bin/gcm/icon.png
-NoDisplay=false
-Type=Application
-Categories=Network;

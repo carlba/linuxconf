@@ -22,7 +22,7 @@ in_array() {
     return 1
 }
 
-ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .git .ssh) 
+ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .git .ssh .config) 
 
 if in_array xfce ${desktop_managers[*]}; then
   ignorefiles+=(".mateconf")
@@ -67,36 +67,41 @@ loop_dir () {
     echo $loop_path
     local loop_path="$1"
     if [ -n "${1+x}" ]; then
-      combined_path=$dotfiles/$loop_path
+      home_path=~/$loop_path
+      dotfiles_path=$dotfiles/$loop_path
     else
-      combined_path=$dotfiles
+      home_path=~
+      dotfiles_path=$dotfiles
     fi
-    for f in $(ls -a -I "." -I ".." $combined_path )
+    echo "Generated pathes"
+    echo "HomePath: $home_path"
+    echo "DotfilesPath: $dotfiles_path"
+    for f in $(ls -a -I "." -I ".." $dotfiles_path )
     do
+      echo $f
       if ! in_array $(basename $f) ${ignorefiles[*]}; then
-        if [ -f $combined_path/$(basename $f) ] || [ -d $combined_path/$(basename $f) ]; then
-          echo $combined_path/$(basename $f) Already exists. Overwrite y/n?
+        if [ -f $home_path/$(basename $f) ] || [ -d $home_path/$(basename $f) ]; then
+          echo $home_path/$(basename $f) Already exists. Overwrite y/n?
           echo  $(basename $f)
           read answer
           case "$answer" in
             y)
               echo "User replied y"
-              rm -r ~/$(basename $f)
+              rm -r $home_path/$(basename $f)
               ;;
             n)
               echo "User replied n"
               continue
               ;;
             *)
-              echo "~/$(basename $f) Already exists. Overwrite y/n?"
+              echo "$home_path$/(basename $f) Already exists. Overwrite y/n?"
 
               ;;
           esac
         fi
-        echo $(basename $f)
+        echo "Creating symlink $home_path/$(basename $f) -> $dotfiles_path/$(basename $f)"
+       
         #ln -s $(basename $f) ~/$(basename $f)
-        echo ~/dotfiles/$(basename $f)
-        echo ~/$(basename $f)        
       fi
 
     done
@@ -104,7 +109,6 @@ loop_dir () {
 
 loop_dir
 loop_dir .config
-echo 
 
 #Handle special files
 #ssh.config

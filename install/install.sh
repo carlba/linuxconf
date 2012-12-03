@@ -1,12 +1,14 @@
 # Git
 
 # Update repo and all submodules
-cd ~/dotfiles
-git submodule init
-git submodule update
-git pull && git submodule update --init --recursive
-git submodule foreach --recursive git submodule update --init
-cd ~/dotfiles/install
+#cd ~/dotfiles
+#git submodule init
+#git submodule update
+#git pull && git submodule update --init --recursive
+#git submodule foreach --recursive git submodule update --init
+#cd ~/dotfiles/install
+
+dotfiles=~/dotfiles
 
 desktop_managers=($(find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop ";"))
 echo ${desktop_managers[*]}
@@ -20,7 +22,7 @@ in_array() {
     return 1
 }
 
-ignorefiles=(.bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .. .git .ssh) 
+ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .git .ssh) 
 
 if in_array xfce ${desktop_managers[*]}; then
   ignorefiles+=(".mateconf")
@@ -36,13 +38,13 @@ if [[ $(uname -a) == *CYGWIN* ]]; then
   echo $linuxenv
 fi
 
-if [[ $linuxenv == cygwin ]]
+if [[ "$linuxenv" == cygwin ]]
 then
   ignorefiles+=(.xchat2 .mateconf .config .local Desktop .komodoedit) 
 fi
 
 # cli mode preset (preset for commandline)
-if [ $1 == climode ]; then
+if [ "$1" == climode ]; then
   ignorefiles+=(.xchat2 .mateconf .config .local Desktop .komodoedit)
 fi
 
@@ -60,35 +62,55 @@ else
 fi
 
 echo "Going through all files in the dotfiles dir."
-for f in $(find ../ -name '*' -maxdepth 1)
-do
-  if ! in_array $(basename $f) ${ignorefiles[*]}; then
-    if [ -f ~/$(basename $f) ] || [ -d ~/$(basename $f) ]; then
-      echo "~/$(basename $f) Already exists. Overwrite y/n?"
-      read answer
-      case "$answer" in
-        y)
-          echo "User replied y"
-          rm -r ~/$(basename $f)
-          ;;
-        n)
-          echo "User replied n"
-          continue
-          ;;
-        *)
-          echo "~/$(basename $f) Already exists. Overwrite y/n?"
 
-          ;;
-      esac
+loop_dir () {
+    echo $loop_path
+    local loop_path="$1"
+    if [ -n "${1+x}" ]; then
+      combined_path=$dotfiles/$loop_path
+    else
+      combined_path=$dotfiles
     fi
-    echo $(basename $f)
-    ln -s ~/dotfiles/$(basename $f) ~/$(basename $f)
-    echo ~/dotfiles/$(basename $f)
-    echo ~/$(basename $f)
-    
-  fi
+    for f in $(ls -a -I "." -I ".." $combined_path )
+    do
+      if ! in_array $(basename $f) ${ignorefiles[*]}; then
+        if [ -f $combined_path/$(basename $f) ] || [ -d $combined_path/$(basename $f) ]; then
+          echo $combined_path/$(basename $f) Already exists. Overwrite y/n?
+          echo  $(basename $f)
+          read answer
+          case "$answer" in
+            y)
+              echo "User replied y"
+              rm -r ~/$(basename $f)
+              ;;
+            n)
+              echo "User replied n"
+              continue
+              ;;
+            *)
+              echo "~/$(basename $f) Already exists. Overwrite y/n?"
 
-done
+              ;;
+          esac
+        fi
+        echo $(basename $f)
+        #ln -s $(basename $f) ~/$(basename $f)
+        echo ~/dotfiles/$(basename $f)
+        echo ~/$(basename $f)        
+      fi
+
+    done
+}
+
+loop_dir
+loop_dir .config
+echo 
+
+#Handle special files
+#ssh.config
+ln -s ~/dotfiles/.ssh/config .ssh/config
+
+
 
 #Dependencies
 

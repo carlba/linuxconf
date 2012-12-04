@@ -100,7 +100,7 @@ loop_dir () {
           esac
         fi
         echo "Creating symlink $home_path/$(basename $f) -> $dotfiles_path/$(basename $f)"
-       
+        ln -s $dotfiles_path/$(basename $f) $home_path/$(basename $f)
         #ln -s $(basename $f) ~/$(basename $f)
       fi
 

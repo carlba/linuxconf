@@ -81,6 +81,12 @@ loop_dir () {
       echo $f
       if ! in_array $(basename $f) ${ignorefiles[*]}; then
         if [ -f $home_path/$(basename $f) ] || [ -d $home_path/$(basename $f) ]; then
+          if [ -p "$home_path/$(basename $f)"  ] || [ -L "$home_path/$(basename $f)" ]; then
+            echo "File is symlink"
+            continue
+          else
+            echo "File is not symlink"
+          fi
           echo $home_path/$(basename $f) Already exists. Overwrite y/n?
           echo  $(basename $f)
           read answer

@@ -66,4 +66,4 @@ set wildmenu
 :amenu &Calle.&Fold\ Apache-config<Tab><F1> <F1><CR>
 
 "Toggle tagbar by default
-au VimEnter * TagbarOpen
+"au VimEnter * TagbarOpen

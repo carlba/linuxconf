@@ -1,5 +1,8 @@
 # .bashrc
 
+source ~/dotfiles/scripts/global.sh
+source ~/dotfiles/scripts/hosts.sh
+
 # Keyboard shortcuts
 bind '"\e[5~": history-search-backward'
 bind '"\e[6~": history-search-forward'
@@ -30,5 +33,5 @@ fi
 # Start tmux if it isn't already running
 if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ]; then
     export TERM=xterm-256color
-    tmux attach || tmux new; exit
+    tmux attach || tmux new
 fi

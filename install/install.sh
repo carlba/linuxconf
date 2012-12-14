@@ -1,12 +1,12 @@
 # Git
 
 # Update repo and all submodules
-#cd ~/dotfiles
-#git submodule init
-#git submodule update
-#git pull && git submodule update --init --recursive
-#git submodule foreach --recursive git submodule update --init
-#cd ~/dotfiles/install
+cd ~/dotfiles
+git submodule init
+git submodule update
+git pull && git submodule update --init --recursive
+git submodule foreach --recursive git submodule update --init
+cd ~/dotfiles/install
 
 dotfiles=~/dotfiles
 

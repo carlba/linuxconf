@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Perl" name="limited_inc">
-      <variable line="7" name="@main::INC_ORIG" />
-    </scope>
-    

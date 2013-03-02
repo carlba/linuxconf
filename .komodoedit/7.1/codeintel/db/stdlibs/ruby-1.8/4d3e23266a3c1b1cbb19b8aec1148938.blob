@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="tkafter">
-      <import line="4" module="tk/timer" symbol="*" />
-    </scope>
-    

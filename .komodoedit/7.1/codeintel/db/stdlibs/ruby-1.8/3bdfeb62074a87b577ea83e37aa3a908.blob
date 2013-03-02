@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="tkmngfocus">
-      <import line="4" module="tk/mngfocus" symbol="*" />
-    </scope>
-    

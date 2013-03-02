@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="drb">
-      <import line="1" module="drb/drb" symbol="*" />
-    </scope>
-    

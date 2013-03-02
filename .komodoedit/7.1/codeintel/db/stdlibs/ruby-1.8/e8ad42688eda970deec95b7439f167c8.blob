@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="tk/after">
-      <import line="6" module="tk/timer" symbol="*" />
-    </scope>
-    

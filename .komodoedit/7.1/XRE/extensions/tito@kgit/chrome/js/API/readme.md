@@ -1,1 +1,0 @@
-This contains universal objects that can be used by many extensions.

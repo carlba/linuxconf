@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="timeextentiontest">
-      <scope classrefs="Test::Unit::TestCase" ilk="class" name="TimeExtentionTest" />
-    </scope>
-    

@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="win32oleruntimeerror">
-      <scope classrefs="RuntimeError" ilk="class" name="WIN32OLERuntimeError" />
-    </scope>
-    

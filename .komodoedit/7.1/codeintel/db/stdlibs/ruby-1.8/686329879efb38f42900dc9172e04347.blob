@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="tkconsole">
-      <import line="4" module="tk/console" symbol="*" />
-    </scope>
-    

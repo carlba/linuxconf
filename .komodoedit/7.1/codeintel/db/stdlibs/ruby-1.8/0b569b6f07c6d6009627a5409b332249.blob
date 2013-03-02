@@ -1,5 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="optparse/shellwords">
-      <import line="3" module="shellwords" symbol="*" />
-      <import line="4" module="optparse" symbol="*" />
-    </scope>
-    

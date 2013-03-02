@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="tkmacpkg">
-      <import line="4" module="tk/macpkg" symbol="*" />
-    </scope>
-    

@@ -1,1 +1,0 @@
-pref('extensions.kgit.gitPath', 'C:\\Program Files\\Git');

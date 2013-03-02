@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="date2">
-      <import line="5" module="date" symbol="*" />
-    </scope>
-    

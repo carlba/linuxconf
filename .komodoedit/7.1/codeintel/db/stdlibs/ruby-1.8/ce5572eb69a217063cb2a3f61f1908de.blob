@@ -1,4 +1,0 @@
-<scope ilk="blob" lang="Ruby" name="tkvirtevent">
-      <import line="4" module="tk/virtevent" symbol="*" />
-    </scope>
-    

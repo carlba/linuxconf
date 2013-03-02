@@ -132,5 +132,5 @@ ln -s ~/dotfiles/.ssh/config .ssh/config
 sudo apt-get install ctags
 
 #Download .simplenoterc file to homefolder.
-scp root@carlb.dyndns.org:~/.simplenoterc ~/
-chmod 600 ~/.simplenoterc
+#scp root@carlb.dyndns.org:~/.simplenoterc ~/
+#chmod 600 ~/.simplenoterc

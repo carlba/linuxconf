@@ -8,6 +8,10 @@ git pull && git submodule update --init --recursive
 git submodule foreach --recursive git submodule update --init
 cd ~/dotfiles/install
 
+if [ "$1" == update ]; then
+  exit
+fi
+
 dotfiles=~/dotfiles
 
 desktop_managers=($(find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop ";"))

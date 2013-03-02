@@ -113,7 +113,6 @@ loop_dir () {
         ln -s $dotfiles_path/$(basename $f) $home_path/$(basename $f)
         #ln -s $(basename $f) ~/$(basename $f)
       fi
-
     done
 }
 
@@ -123,8 +122,6 @@ loop_dir .config
 #Handle special files
 #ssh.config
 ln -s ~/dotfiles/.ssh/config .ssh/config
-
-
 
 #Dependencies
 

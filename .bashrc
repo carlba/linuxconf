@@ -33,5 +33,8 @@ fi
 # Start tmux if it isn't already running
 if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ]; then
     export TERM=xterm-256color
-    tmux attach || tmux new
+    #tmux attach || tmux new
 fi
+
+#Colors for ls command
+eval $( dircolors -b $HOME/dotfiles/ls-colors-solarized/dircolors )

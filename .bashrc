@@ -7,6 +7,10 @@ source ~/dotfiles/scripts/hosts.sh
 bind '"\e[5~": history-search-backward'
 bind '"\e[6~": history-search-forward'
 
+# History settings
+HISTSIZE=50000
+HISTFILESIZE=500000
+
 # User specific aliases and functions
 
 alias rm='rm -i'

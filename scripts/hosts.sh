@@ -1,3 +1,4 @@
+#!/bin/bash
 source ~/dotfiles/scripts/global.sh
 
 function addhost() {
@@ -16,7 +17,7 @@ function addhost() {
     echo "Exists" 
   else
     echo "Not Exists"
-    sudo su -c "echo -e \"$1 \t $2\" >> $hostsfile"
+    sudo su -c "echo -e \"$1\t$2\" >> $hostsfile"
   fi
 }
 
@@ -28,7 +29,3 @@ function hoststohostsfile {
     addHost $ip $addr 
   done < $1
 }
-
-
-
-

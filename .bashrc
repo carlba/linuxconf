@@ -3,6 +3,8 @@
 source ~/dotfiles/scripts/global.sh
 source ~/dotfiles/scripts/hosts.sh
 
+export DOTFILES=~/dotfiles
+
 # Keyboard shortcuts
 bind '"\e[5~": history-search-backward'
 bind '"\e[6~": history-search-forward'
@@ -20,6 +22,7 @@ alias vi='vim'
 
 
 PS1="[\\u@\\h:\\w] $"
+
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then

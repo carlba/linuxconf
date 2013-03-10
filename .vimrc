@@ -1,7 +1,7 @@
 call pathogen#infect()
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
-source ~/.simplenoterc
+"source ~/.simplenoterc
 "behave mswin
 
 set diffexpr=MyDiff()

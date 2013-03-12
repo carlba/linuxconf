@@ -49,5 +49,5 @@ eval $( dircolors -b $HOME/dotfiles/ls-colors-solarized/dircolors )
 if [[ "$(hostname -s)" == asusen  ]]; then
   PROMPT_COMMAND='echo -ne "\033]0;local\007"'
 else
-  PROMPT_COMMAND='echo -ne "\033]0;$(hostname -f)\007"'
+  PROMPT_COMMAND='echo -ne "\033]0;$(hostname -s)\007"'
 fi

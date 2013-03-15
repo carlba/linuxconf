@@ -1,7 +1,7 @@
 # .bashrc
 
-source ~/dotfiles/scripts/global.sh
-source ~/dotfiles/scripts/hosts.sh
+#source ~/dotfiles/scripts/global.sh
+#source ~/dotfiles/scripts/hosts.sh
 
 export DOTFILES=~/dotfiles
 
@@ -37,6 +37,12 @@ fi
 if [ -f ~/dotfiles/.bash_aliases ]; then
     . ~/dotfiles/.bash_aliases
 fi
+
+if [ -e ~/dotfiles/bashrc.d ]; then
+  for f in ~/dotfiles/bashrc.d/*; do    
+    . $f
+  done
+fi
 # Start tmux if it isn't already running
 if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ]; then
     export TERM=xterm-256color
@@ -51,3 +57,9 @@ if [[ "$(hostname -s)" == asusen  ]]; then
 else
   PROMPT_COMMAND='echo -ne "\033]0;$(hostname -s)\007"'
 fi
+
+#tmuxinator stuff
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+#export default editor
+export EDITOR=vi

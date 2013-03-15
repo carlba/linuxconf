@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/dotfiles/scripts/global.sh
+source ~/dotfiles/bashrc.d/global.sh
 
 function addhost() {
   local dotfileshosts=~/dotfiles/hosts

@@ -1,5 +1,5 @@
 #!/bin/bash
-. $DOTFILES/scripts/global.sh
+. $DOTFILES/bashrc.d/global.sh
 SCRIPTS=$DOTFILES/scripts
 
 

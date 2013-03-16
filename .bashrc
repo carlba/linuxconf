@@ -1,8 +1,5 @@
 # .bashrc
 
-#source ~/dotfiles/scripts/global.sh
-#source ~/dotfiles/scripts/hosts.sh
-
 export DOTFILES=~/dotfiles
 
 # Keyboard shortcuts

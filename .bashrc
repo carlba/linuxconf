@@ -47,12 +47,15 @@ if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ]; then
 fi
 
 #Colors for ls command
-eval $( dircolors -b $HOME/dotfiles/ls-colors-solarized/dircolors )
+eval $( dircolors -b $HOME/dotfiles/dircolors-solarized/dircolors.256dark)
 
-if [[ "$(hostname -s)" == asusen  ]]; then
-  PROMPT_COMMAND='echo -ne "\033]0;local\007"'
-else
-  PROMPT_COMMAND='echo -ne "\033]0;$(hostname -s)\007"'
+
+if [[ $(uname) != *CYGWIN*  ]]; then
+  if [[ "$(hostname -s)" == asusen  ]]; then
+    PROMPT_COMMAND='echo -ne "\033]0;local\007"'
+  else
+    PROMPT_COMMAND='echo -ne "\033]0;$(hostname -s)\007"'
+  fi
 fi
 
 #tmuxinator stuff

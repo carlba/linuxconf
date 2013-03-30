@@ -47,7 +47,7 @@ if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ]; then
 fi
 
 #Colors for ls command
-eval $( dircolors -b $HOME/dotfiles/ls-colors-solarized/dircolors )
+eval $( dircolors -b $HOME/dotfiles/dircolors-solarized/dircolors.256dark)
 
 
 if [[ $(uname) != *CYGWIN*  ]]; then

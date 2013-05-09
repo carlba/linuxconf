@@ -56,13 +56,19 @@ echo "The contents of the ignorefiles array: ${ignorefiles[*]}"
 
 # Source my own .bashrc after the systemone if it exists otherwise symlink the dotfiles one to the homedir.
 
-if grep -q "#Template .bashrc" ~/.bashrc; then
-  echo "dotfiles/.bashrc is already being sourced"
-else
-  if [ -f ~/.bashrc ] ; then
-    cat templates/.bashrc >> ~/.bashrc
-    echo Working
+
+if [ -f ~/.bashrc ] ; then
+  if grep -q "#Template .bashrc" ~/.bashrc; then
+    echo "dotfiles/.bashrc is already being sourced"
+  else
+    if [ -f ~/.bashrc ] ; then
+      cat templates/.bashrc >> ~/.bashrc
+      echo Working
+    fi
   fi
+else
+  echo "est"
+  ln -s $dotfiles/.bashrc ~/.bashrc
 fi
 
 echo "Going through all files in the dotfiles dir."

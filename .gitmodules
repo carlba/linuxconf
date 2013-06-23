@@ -19,3 +19,6 @@
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = git://github.com/seebi/dircolors-solarized.git
+[submodule ".vim/bundle/pyflakes-vim"]
+	path = .vim/bundle/pyflakes-vim
+	url = git://github.com/kevinw/pyflakes-vim.git

@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/pyflakes/ftplugin/python/pyflakes"]
 	path = .vim/bundle/pyflakes/ftplugin/python/pyflakes
 	url = git@github.com:kevinw/pyflakes.git
+[submodule ".vim/bundle/pyflakes"]
+	path = .vim/bundle/pyflakes
+	url = https://github.com/kevinw/pyflakes-vim

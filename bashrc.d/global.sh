@@ -29,3 +29,15 @@ function isHostOnline {
       return 1	# Note that zero means successful. It is the return value not a TRUE or FALSE value.
 	fi
 }
+
+function isHostRespodingOnPort {
+  nc -z -w 3 $1 $2 &> /dev/null
+  if [[ $? == 0 ]]
+  then
+      [[ $- == *i* ]] && echo Host ${1} is responding on port $2.
+      return 0 # Note that zero means successful. It is the return value not a TRUE or FALSE value.
+  else
+      [[ $- == *i* ]] && echo Host ${1} is NOT responding on port $2.
+      return 1  # Note that zero means successful. It is the return value not a TRUE or FALSE value.
+  fi
+}

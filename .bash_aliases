@@ -1,5 +1,6 @@
 # Aliases
 alias tunneltowork='ssh -f trillian.birdstep.com -L 2222:enterprise.d.birdstep.internal:22 -N'
+alias tunneltohome='ssh -f root@carlb.dyndns.org -L 8080:localhost:80 -L 9091:localhost:9091 -N'
 alias tunneltoirc='ssh -f trillian.birdstep.com -L 6697:enterprise.d.birdstep.internal:6697 -N'
 alias ssh@bernard="ssh -t cada@trillian.birdstep.com 'ssh root@195.242.62.239'"
 alias ssh@florina.d.birdstep.internal="ssh -t root@florina.d.birdstep.internal"
@@ -14,3 +15,4 @@ alias cliptime="date +%T | tr -d '\n' | xclip -sec c"
 alias tunneltorabbitmq@cygni="ssh -t -L 55555:bastion.d:55555 cada@bastion.d ssh -t -L *:55555:localhost:55672 root@50.28.36.178"
 alias root@cygni="ssh -t cada@trillian.birdstep.com 'ssh root@50.28.36.178\'"
 alias root@merope="ssh -t cada@trillian.birdstep.com 'ssh root@50.28.36.179\'"
+alias curlbs="curl -A "AliceAutoUpdateAgent" --insecure"

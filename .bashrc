@@ -6,10 +6,6 @@ export DOTFILES=~/dotfiles
 bind '"\e[5~": history-search-backward'
 bind '"\e[6~": history-search-forward'
 
-# History settings
-HISTSIZE=50000
-HISTFILESIZE=500000
-
 # User specific aliases and functions
 
 alias rm='rm -i'
@@ -57,6 +53,16 @@ if [[ $(uname) != *CYGWIN*  ]]; then
     PROMPT_COMMAND='echo -ne "\033]0;$(hostname -s)\007"'
   fi
 fi
+
+# History settings
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 
 #tmuxinator stuff
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

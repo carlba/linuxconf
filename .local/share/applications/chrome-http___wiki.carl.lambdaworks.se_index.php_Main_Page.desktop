@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Fenix
+Exec=/opt/google/chrome/google-chrome --app=http://wiki.carl.lambdaworks.se/index.php/Main_Page
+Icon=/home/cada/.local/share/icons/phoenixlogo.png
+StartupWMClass=wiki.carl.lambdaworks.se__index.php_Main_Page

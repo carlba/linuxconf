@@ -16,3 +16,4 @@ alias tunneltorabbitmq@cygni="ssh -t -L 55555:bastion.d:55555 cada@bastion.d ssh
 alias root@cygni="ssh -t cada@trillian.birdstep.com 'ssh root@50.28.36.178\'"
 alias root@merope="ssh -t cada@trillian.birdstep.com 'ssh root@50.28.36.179\'"
 alias curlbs="curl -A "AliceAutoUpdateAgent" --insecure"
+alias pingtest="ping ping.birdstep.com"

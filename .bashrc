@@ -13,10 +13,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias vi='vim'
 
-
-PS1="[\\u@\\h:\\w] $"
-
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -43,12 +39,12 @@ if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ]; then
 fi
 
 #Colors for ls command
-eval $( dircolors -b $HOME/dotfiles/dircolors-solarized/dircolors.256dark)
+#eval $( dircolors -b $HOME/dotfiles/dircolors-solarized/dircolors.256dark)
 
 
-if [[ $(uname) != *CYGWIN*  ]]; then
-  if [[ "$(hostname -s)" == asusen  ]]; then
-    PROMPT_COMMAND='echo -ne "\033]0;local\007"'
+if [[ "$(lsb_release -si)" != "Ubuntu" ]] && [[ $(uname) != *CYGWIN* ]]; then
+  if [[ "$(hostname -s)" == cada  ]]; then
+    PROMPT_COMMAND='echo -ne "\033]0;local\007"'     
   else
     PROMPT_COMMAND='echo -ne "\033]0;$(hostname -s)\007"'
   fi
@@ -61,11 +57,11 @@ export HISTFILESIZE=100000               # big big history
 shopt -s histappend                      # append to history, don't overwrite it
 
 # Save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 
 #tmuxinator stuff
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+#[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 #export default editor
 export EDITOR=vi

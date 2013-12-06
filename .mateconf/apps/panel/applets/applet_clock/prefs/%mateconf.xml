@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<mateconf>
-	<entry name="format" mtime="1352744426" type="string">
-		<stringvalue>24-hour</stringvalue>
-	</entry>
-	<entry name="show_date" mtime="1352832396" type="bool" value="true"/>
-	<entry name="cities" mtime="1352636989" type="list" ltype="string">
-	</entry>
-</mateconf>

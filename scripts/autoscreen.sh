@@ -5,8 +5,11 @@ SCRIPTS=$DOTFILES/scripts
 
 currentip=$(getCurrentIP)
 
+
 if [[ "$currentip" == *192.168* ]]; then  
-  source ~/.screenlayout/hemma.sh
+  [ -e  ~/.screenlayout/hemma.sh ] && source ~/.screenlayout/hemma.sh
+  #synergyc burken
 elif [[ "$currentip" == *10.10* ]]; then
-  source ~/.screenlayout/dualmonitor.sh
+  [ -e  ~/.screenlayout/dualmonitor.sh ] && source ~/.screenlayout/dualmonitor.sh
+  #synergyc wincada.d.birdstep.internal
 fi

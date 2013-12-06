@@ -87,6 +87,15 @@ install_file() {
   fi
 }
 
+clear_vim_swap() {
+  find ~ -mount -name "*~" -exec rm -rf {} \; 
+}
+
+
+
+
+#Preparations
+clear_vim_swap
 
 
 
@@ -111,7 +120,7 @@ install_file templates/dotfiles.sh /etc/profile.d/
 desktop_managers=($(find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop ";"))
 echo ${desktop_managers[*]}
 
-ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .git .ssh .config .local )
+ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .git .ssh .config .local *.~* )
 
 if in_array xfce ${desktop_managers[*]}; then
   ignorefiles+=(".mateconf")
@@ -148,6 +157,7 @@ echo "Going through all files in the dotfiles dir."
 loop_dir
 loop_dir .config
 loop_dir .local/share/icons
+loop_dir .local/share/applications
 
 #Handle special files
 #ssh.config

@@ -41,3 +41,11 @@ function isHostRespodingOnPort {
       return 1  # Note that zero means successful. It is the return value not a TRUE or FALSE value.
   fi
 }
+
+function closeGuiApplication {
+  wmctrl -c "$1"
+}
+
+function pingTest {
+  ping ping.birdstep.com
+}

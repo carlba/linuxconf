@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=News & Events - News & Events - Birdstep Confluence
+Exec=/opt/google/chrome/google-chrome "--app=https://confluence.birdstep.internal/pages/viewpage.action?pageId=3440919"
+Icon=/home/cada/dotfiles/.local/share/icons/confluence.png
+StartupWMClass=confluence.birdstep.internal__pages_viewpage.action
+Name[en_US]=Confluence
+GenericName[en_US]=Confluence
+Comment[en_US]=Confluence

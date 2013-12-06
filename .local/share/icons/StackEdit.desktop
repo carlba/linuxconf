@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=StackEdit - credentialserver.txt
+Exec=/opt/google/chrome/google-chrome "--app=https://stackedit.io/#"
+Icon=chrome-https___stackedit.io_#
+StartupWMClass=stackedit.io
+Name[en_US]=StackEdit

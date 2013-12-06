@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Birdstep Credential Server - Task Board - Birdstep Support
+Exec=/opt/google/chrome/google-chrome --app=https://support.birdstep.com/jira/secure/TaskBoard.jspa
+Icon=/home/cada/dotfiles/.local/share/icons/jira.png
+StartupWMClass=support.birdstep.com__jira_secure_TaskBoard.jspa
+Name[en_US]=Jira
+GenericName[en_US]=Jira
+Comment[en_US]=Jira

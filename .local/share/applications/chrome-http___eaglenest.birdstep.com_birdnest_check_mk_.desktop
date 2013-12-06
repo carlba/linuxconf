@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Check_MK birdnest
+Exec=/opt/google/chrome/google-chrome --app=http://eaglenest.birdstep.com/birdnest/check_mk/
+Icon=/home/cada/dotfiles/.local/share/icons/check_mk.png
+StartupWMClass=eaglenest.birdstep.com__birdnest_check_mk

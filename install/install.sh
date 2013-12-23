@@ -109,7 +109,7 @@ git_setup() {
 ignorefiles_setup()
 {
   #Handle ignorefiles
-  ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .git .ssh .config .local *.~* )
+  ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .git .ssh .config .local *.~* .profile)
 
   if in_array xfce ${desktop_managers[*]}; then
     ignorefiles+=(".mateconf")

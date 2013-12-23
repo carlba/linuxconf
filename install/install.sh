@@ -1,5 +1,7 @@
 dotfiles=~/dotfiles
 
+. $DOTFILES/bashrc.d/global.sh
+
 in_array() {
     local hay needle=$1
     shift
@@ -83,13 +85,18 @@ loop_dir () {
 
 install_file() {
   if [ -f "$1" ]; then
-    sudo cp -rf "$1" "$2"
+    if commandExists sudo; then
+      sudo cp -rf "$1" "$2"
+    else
+      cp -rf "$1" "$2"
+    fi
   fi
 }
 
 clear_vim_swap() {
   find ~ -mount -name "*~" -exec rm -rf {} \; 
 }
+
 
 
 
@@ -138,7 +145,8 @@ fi
 
 if [[ "$linuxenv" == cygwin ]]
 then
-  ignorefiles+=(.xchat2 .mateconf .config .local Desktop .komodoedit) 
+  ignorefiles+=(.xchat2 .mateconf .config .local Desktop .komodoedit)
+  rm -rf ~/.bash_profile
 fi
 
 # cli mode preset (preset for commandline)
@@ -166,7 +174,11 @@ ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 #Dependencies
 
 #Vim TabBar
-sudo apt-get install ctags
+if commandExists sudo; then
+  sudo apt-get install ctags
+else
+  apt-get install ctags
+fi
 
 #Download .simplenoterc file to homefolder.
 #scp root@carlb.dyndns.org:~/.simplenoterc ~/

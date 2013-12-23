@@ -49,3 +49,15 @@ function closeGuiApplication {
 function pingTest {
   ping ping.birdstep.com
 }
+
+function commandExists {
+	command -v $1 >/dev/null 2>&1
+  if [[ $? == 0 ]]
+	then
+      [[ $- == *i* ]] && echo  Command ${1} does exist.
+      return 0 # Note that zero means successful. It is the return value not a TRUE or FALSE value.
+	else
+      [[ $- == *i* ]] && echo Command ${1} does not exist.
+      return 1	# Note that zero means successful. It is the return value not a TRUE or FALSE value.
+	fi
+}

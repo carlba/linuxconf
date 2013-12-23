@@ -42,7 +42,7 @@ fi
 #eval $( dircolors -b $HOME/dotfiles/dircolors-solarized/dircolors.256dark)
 
 
-if [[ "$(lsb_release -si)" != "Ubuntu" ]] && [[ $(uname) != *CYGWIN* ]]; then
+if [[ $(uname) != *CYGWIN* ]] && [[ "$(lsb_release -si)" != "Ubuntu" ]]; then
   if [[ "$(hostname -s)" == cada  ]]; then
     PROMPT_COMMAND='echo -ne "\033]0;local\007"'     
   else

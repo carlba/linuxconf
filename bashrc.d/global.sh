@@ -15,7 +15,8 @@ function md5gen {
 }
 
 function getCurrentIP {
-  ifconfig | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}'
+  #First param is the filter 
+  fconfig | grep "inet addr:$1"| grep -v "127.0.0.1" | cut -d: -f2 | awk '{ print $1}'
 }
 
 function isHostOnline {

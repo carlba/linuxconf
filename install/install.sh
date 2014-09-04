@@ -173,6 +173,7 @@ fi
 #Handle special files
 #ssh.config
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
+ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc
 
 #Dependencies
 

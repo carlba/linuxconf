@@ -1,6 +1,6 @@
 dotfiles=~/dotfiles
 
-. $DOTFILES/bashrc.d/global.sh
+. $dotfiles/bashrc.d/global.sh
 
 in_array() {
     local hay needle=$1

@@ -19,8 +19,8 @@ add_template () {
       echo "$1" is already being sourced
     else
       if [ -f ~/"$1" ] ; then
-        if [ -f templates/"$1" ]; then
-          cat templates/"$1" >> ~/"$1"
+        if [ -f $dotfiles/install/templates/"$1" ]; then
+          cat $dotfiles/install/templates/"$1" >> ~/"$1"
           echo "Added template to $1"
         else
           echo "Template file missing        "

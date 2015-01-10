@@ -83,16 +83,12 @@ loop_dir () {
 
 install_file() {
   if [ -f "$1" ]; then
-    if commandExists sudo; then
+    if command_exists sudo; then
       sudo cp -rf "$1" "$2"
     else
       cp -rf "$1" "$2"
     fi
   fi
-}
-
-clear_vim_swap() {
-  find ~ -mount -name "*~" -exec rm -rf {} \;
 }
 
 git_setup() {
@@ -109,7 +105,7 @@ git_setup() {
 ignorefiles_setup()
 {
   #Handle ignorefiles
-  ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .git .ssh .config .local *.~* .profile)
+  ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall   README.md tmp.tmp deploy .git .ssh .config .local *.~* .profile dotfiles.sublime-project dotfiles.sublime-workspace)
 
   if in_array xfce ${desktop_managers[*]}; then
     ignorefiles+=(".mateconf")
@@ -135,20 +131,15 @@ ignorefiles_setup()
 add_template ".bashrc"
 add_template ".profile"
 
-
-
 #Preparations
 desktop_managers=($([ -d "/usr/share/xsessions" ] && find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop ";"))
-
 if [[ $(uname -a) == *CYGWIN* ]]; then
   linuxenv=cygwin
 fi
 
-clear_vim_swap
+clear_vim_swap $HOME
 git_setup
 ignorefiles_setup
-
-
 
 #If update only the git setup will be done
 if [ "$1" == update ]; then
@@ -181,8 +172,8 @@ ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc
 #Vim TabBar
 
 
-if commandExists apt-get; then
-  if commandExists sudo; then
+if command_exists apt-get; then
+  if command_exists sudo; then
     sudo apt-get install ctags
   else
     apt-get install ctags

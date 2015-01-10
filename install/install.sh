@@ -99,10 +99,10 @@ git_setup() {
   # Git
   # Update repo and all submodules
   cd ~/dotfiles
-  git submodule init
-  git submodule update
-  git pull && git submodule update --init --recursive
-  git submodule foreach --recursive git submodule update --init
+  git submodule init > /dev/null
+  git submodule update > /dev/null
+  git pull > /dev/null && git submodule update --init --recursive > /dev/null
+  git submodule foreach --recursive git submodule update --init > /dev/null
   cd ~/dotfiles/install
 }
 
@@ -138,18 +138,19 @@ add_template ".profile"
 
 
 #Preparations
-clear_vim_swap
-git_setup
-desktop_managers=($(find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop ";"))
-ignorefiles_setup
+desktop_managers=($([ -d "/usr/share/xsessions" ] && find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop ";"))
 
 if [[ $(uname -a) == *CYGWIN* ]]; then
   linuxenv=cygwin
 fi
 
+clear_vim_swap
+git_setup
+ignorefiles_setup
+
+
 
 #If update only the git setup will be done
-
 if [ "$1" == update ]; then
   exit
 fi
@@ -160,12 +161,12 @@ fi
 install_file templates/dotfiles.sh /etc/profile.d/
 
 # Setup symlinks between dotfiles and home directory
-echo "Going through all files in the dotfiles dir."
+echo -e "\n Going through all files in the dotfiles dir."
 
 loop_dir
 loop_dir .config
 
-if [[ "$linuxenv" != cygwin ]]; then
+if [[ "$linuxenv" != cygwin ]] && [ -z "desktop_managers" ]; then
   loop_dir .local/share/icons
   loop_dir .local/share/applications
 fi

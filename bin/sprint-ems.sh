@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source $DOTFILES/bashrc.d/global.sh
+
+guake_new_tab sprint.esa.birdstep.com root frontend
+guake_new_tab sprint.adm.birdstep.com root backend

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source $DOTFILES/bashrc.d/global.sh
+
+guake_new_tab servern cada
+

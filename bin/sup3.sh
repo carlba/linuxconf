@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source $DOTFILES/bashrc.d/global.sh
+
+guake_new_tab host7.birdstep.com root
+guake_new_tab host17.birdstep.com root queue
+guake_new_tab host18.birdstep.com root
+guake_new_tab host20.birdstep.com root redis
+guake_new_tab host23.birdstep.com root redis
+guake_new_tab host24.birdstep.com root db

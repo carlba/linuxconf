@@ -2,6 +2,10 @@ dotfiles=~/dotfiles
 
 . $dotfiles/bashrc.d/global.sh
 
+green='\e[0;32m' # '\e[1;32m' is too bright for white bg.
+red='\e[1;31m'
+
+
 in_array() {
     local hay needle=$1
     shift
@@ -95,7 +99,7 @@ git_setup() {
   # Git
   # Update repo and all submodules
   cd ~/dotfiles
-  git submodule init > /dev/null
+  echo -e "$green$(git submodule init)$end_color"
   git submodule update > /dev/null
   git pull > /dev/null && git submodule update --init --recursive > /dev/null
   git submodule foreach --recursive git submodule update --init > /dev/null
@@ -152,6 +156,8 @@ fi
 install_file templates/dotfiles.sh /etc/profile.d/
 
 # Setup symlinks between dotfiles and home directory
+asdfasdf
+fasdfasdf
 echo -e "\n Going through all files in the dotfiles dir."
 
 loop_dir

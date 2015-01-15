@@ -1,5 +1,10 @@
 #!/bin/bash
 
+green='\e[0;32m' # '\e[1;32m' is too bright for white bg.
+red='\e[1;31m'
+end_color='\e[0m'
+
+
 function instr_file { 
   local needle="$1" 
   local filepath="$2"
@@ -65,4 +70,11 @@ function command_exists {
 
 clear_vim_swap() {  
   find $1 -mount -name "*~" -exec rm -rf {} \;
+}
+
+function guake_new_tab {
+  local server=$1
+  local user=$2
+  local tab_title="($3)"
+  guake --new-tab ~ && guake -r "$1 $tab_title" && guake --execute-command="ssh -t $user@$server \"tmux new -s cada || tmux new -t cada\"" 
 }

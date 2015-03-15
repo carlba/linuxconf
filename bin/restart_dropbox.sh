@@ -1,0 +1,1 @@
+dropbox stop && dropbox start

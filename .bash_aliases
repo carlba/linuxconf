@@ -12,3 +12,4 @@ alias pingtest="ping ping.birdstep.com"
 alias getextip="curl http://wtfismyip.com/text"
 alias screenoff="xset -display :0.0 dpms force off"
 alias dudefault="du -hx --max-depth=1 | sort -hr | head"
+alias isodate='date "+%Y-%m-%d"'

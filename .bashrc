@@ -43,12 +43,18 @@ fi
 
 
 if [[ $(uname) != *CYGWIN* ]] && [[ "$(lsb_release -si)" != "Ubuntu" ]]; then
-  if [[ "$(hostname -s)" == cada  ]]; then
-    PROMPT_COMMAND='echo -ne "\033]0;local\007"'     
-  else
-    PROMPT_COMMAND='echo -ne "\033]0;$(hostname -s)\007"'
-  fi
+	if [[ "$(hostname -s)" == cada  ]]; then
+	  PROMPT_COMMAND='echo -ne "\033]0;local\007"'     
+	else
+	  PROMPT_COMMAND='echo -ne "\033]0;$(hostname -s)\007"'
+	fi
 fi
+
+# Set nice looking prompt for cygwin
+if [[ $(uname) = *CYGWIN* ]]; then
+  export PS1='\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\$ '
+fi
+
 
 # History settings
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
@@ -57,7 +63,9 @@ export HISTFILESIZE=100000               # big big history
 shopt -s histappend                      # append to history, don't overwrite it
 
 # Save and reload the history after each command finishes
+
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 
 
 #tmuxinator stuff

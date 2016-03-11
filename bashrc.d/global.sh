@@ -78,3 +78,10 @@ function guake_new_tab {
   local tab_title="($3)"
   guake --new-tab ~ && guake -r "$1 $tab_title" && guake --execute-command="ssh -t $user@$server \"tmux new -s cada || tmux new -t cada\"" 
 }
+
+function virtualenv_bs {
+  [[ ! -f "requirements.txt" ]] && echo "No requirements.txt file in folder" && exit
+  virtualenv venv && source venv/bin/activate
+  pip install --upgrade pip
+  pip install -r requirements.txt
+}

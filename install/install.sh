@@ -178,8 +178,8 @@ ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc
 
 if command_exists apt-get; then
   if command_exists sudo; then
-    sudo apt-get install ctags
+    sudo apt-get install ctags > /dev/null
   else
-    apt-get install ctags
+    apt-get install ctags > /dev/null
   fi
 fi

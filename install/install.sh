@@ -98,12 +98,12 @@ install_file() {
 git_setup() {
   # Git
   # Update repo and all submodules
-  cd ~/dotfiles
+  pushd ~/dotfiles
   echo -e "$green$(git submodule init)$end_color"
   git submodule update > /dev/null
   git pull > /dev/null && git submodule update --init --recursive > /dev/null
   git submodule foreach --recursive git submodule update --init > /dev/null
-  cd ~/dotfiles/install
+  popd
 }
 
 ignorefiles_setup()

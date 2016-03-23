@@ -1,5 +1,6 @@
 call pathogen#infect()
 set nocompatible
+set nobackup
 source $VIMRUNTIME/vimrc_example.vim
 "source ~/.simplenoterc
 "behave mswin

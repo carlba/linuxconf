@@ -156,8 +156,6 @@ fi
 install_file templates/dotfiles.sh /etc/profile.d/
 
 # Setup symlinks between dotfiles and home directory
-asdfasdf
-fasdfasdf
 echo -e "\n Going through all files in the dotfiles dir."
 
 loop_dir

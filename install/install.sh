@@ -2,7 +2,7 @@ dotfiles=~/dotfiles
 
 . $dotfiles/bashrc.d/global.sh
 
-green='\e[0;32m' # '\e[1;32m' is too bright for white bg.
+green='\e[0;32m' # '\e[1;32m' is too bright for white background.
 red='\e[1;31m'
 
 
@@ -47,12 +47,12 @@ loop_dir () {
       home_path=~
       dotfiles_path=$dotfiles
     fi
-    echo "Generated pathes"
+    echo "Generated paths"
     echo "HomePath: $home_path"
     echo "DotfilesPath: $dotfiles_path"
     for f in $(ls -a -I "." -I ".." $dotfiles_path )
     do
-      if ! in_array $(basename $f) ${ignorefiles[*]}; then
+      if ! in_array $(basename $f) ${ignore_files[*]}; then
         if [ -f $home_path/$(basename $f) ] || [ -d $home_path/$(basename $f) ]; then
           if [ -p "$home_path/$(basename $f)"  ] || [ -L "$home_path/$(basename $f)" ]; then
             # File is symlink
@@ -106,31 +106,31 @@ git_setup() {
   popd
 }
 
-ignorefiles_setup()
+ignore_files_setup()
 {
-  #Handle ignorefiles
-  ignorefiles=(. .. .bashrc git_configuration.sh .gitmodules install linstall   README.md tmp.tmp deploy .git .ssh .config .local *.~* .profile dotfiles.sublime-project dotfiles.sublime-workspace)
+  #Handle ignore_files
+  ignore_files=(. .. .bashrc git_configuration.sh .gitmodules install linstall   README.md tmp.tmp deploy .git .ssh .config .local *.~* .profile dotfiles.sublime-project dotfiles.sublime-workspace)
 
   if in_array xfce ${desktop_managers[*]}; then
-    ignorefiles+=(".mateconf")
+    ignore_files+=(".mateconf")
   fi
 
-  if [[ "$linuxenv" == cygwin ]]
+  if [[ "$linux_env" == cygwin ]]
   then
-    ignorefiles+=(.xchat2 .mateconf .config .local Desktop .komodoedit)
+    ignore_files+=(.xchat2 .mateconf .config .local Desktop .komodoedit)
     rm -rf ~/.bash_profile
   fi
 
-  # cli mode preset (preset for commandline)
+  # cli mode preset (preset for command line)
   if [ "$1" == climode ]; then
-    ignorefiles+=(.xchat2 .mateconf .config .local Desktop .komodoedit share applications icons)
+    ignore_files+=(.xchat2 .mateconf .config .local Desktop .komodoedit share applications icons)
   fi
 
-  echo "The contents of the ignorefiles array: ${ignorefiles[*]}"
+  echo "The contents of the ignore_files array: ${ignore_files[*]}"
 }
 
 
-# Source my own .bashrc after the systemone if it exists otherwise symlink the dotfiles one to the homedir.
+# Source my own .bashrc after the one in the system if it exists otherwise symlink the dotfiles one to the home directory.
 
 add_template ".bashrc"
 add_template ".profile"
@@ -138,12 +138,12 @@ add_template ".profile"
 #Preparations
 desktop_managers=($([ -d "/usr/share/xsessions" ] && find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop ";"))
 if [[ $(uname -a) == *CYGWIN* ]]; then
-  linuxenv=cygwin
+  linux_env=cygwin
 fi
 
 clear_vim_swap $HOME
 git_setup
-ignorefiles_setup
+ignore_files_setup
 
 #If update only the git setup will be done
 if [ "$1" == update ]; then
@@ -156,12 +156,12 @@ fi
 install_file templates/dotfiles.sh /etc/profile.d/
 
 # Setup symlinks between dotfiles and home directory
-echo -e "\n Going through all files in the dotfiles dir."
+echo -e "\n Going through all files in the dotfiles directory"
 
 loop_dir
 loop_dir .config
 
-if [[ "$linuxenv" != cygwin ]] && [ -z "desktop_managers" ]; then
+if [[ "$linux_env" != cygwin ]] && [ -z "desktop_managers" ]; then
   loop_dir .local/share/icons
   loop_dir .local/share/applications
 fi

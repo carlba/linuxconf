@@ -6,3 +6,7 @@ codeintel*
 *.bak
 *.pyc
 dotfiles.sublime-workspace
+
+# xfce stuff
+.config/xfce4/desktop
+.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml

@@ -1,5 +1,5 @@
 favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,libreoffice-writer.desktop,libreoffice-calc.desktop,pidgin.desktop,gmusicbrowser.desktop,ubuntu-software-center.desktop,exo-terminal-emulator.desktop,xfhelp4.desktop
-recent=syntevo-smartgit.desktop,jetbrains-pycharm.desktop,google-chrome.desktop,skype-desktop.desktop,guake.desktop,doublecmd.desktop,gtk-theme-config.desktop,Xfce-Theme-Manager.desktop,xfce-ui-settings.desktop,xfce-settings-manager.desktop
+recent=syntevo-smartgit.desktop,xfce-ui-settings.desktop,jetbrains-pycharm.desktop,google-chrome.desktop,skype-desktop.desktop,guake.desktop,doublecmd.desktop,gtk-theme-config.desktop,Xfce-Theme-Manager.desktop,xfce-settings-manager.desktop
 button-title=Applications Menu
 button-icon=xubuntu-logo-menu
 button-single-row=false

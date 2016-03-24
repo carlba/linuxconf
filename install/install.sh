@@ -113,7 +113,10 @@ ignore_files_setup()
 
   if in_array xfce ${desktop_managers[*]}; then
     ignore_files+=(".mateconf")
+  else
+    ignore_files+=("xfce4")
   fi
+
 
   if [[ "$linux_env" == cygwin ]]
   then
@@ -136,7 +139,8 @@ add_template ".bashrc"
 add_template ".profile"
 
 #Preparations
-desktop_managers=($([ -d "/usr/share/xsessions" ] && find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop ";"))
+desktop_managers=($([ -d "/usr/share/xsessions" ] && find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop \;))
+
 if [[ $(uname -a) == *CYGWIN* ]]; then
   linux_env=cygwin
 fi

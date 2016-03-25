@@ -34,7 +34,7 @@ if [ -e ~/dotfiles/bashrc.d ]; then
   done
 fi
 
-if command_exists lsb-release && [[ "$(lsb_release -si)" != "Ubuntu" ]]; then
+if command_exists lsb_release >/dev/null && [[ "$(lsb_release -si)" != "Ubuntu" ]]; then
   PROMPT_COMMAND='export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "'
 fi
 
@@ -48,9 +48,6 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Save and reload the history after each command finishes
 
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-
-#tmuxinator stuff
-#[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 #export default editor
 export EDITOR=vi

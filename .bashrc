@@ -12,6 +12,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias vi='vim'
+alias ls="ls --color=auto"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -32,27 +33,18 @@ if [ -e ~/dotfiles/bashrc.d ]; then
     . $f
   done
 fi
+
 # Start tmux if it isn't already running
 if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ]; then
     export TERM=xterm-256color
     #tmux attach || tmux new
 fi
 
-#Colors for ls command
-#eval $( dircolors -b $HOME/dotfiles/dircolors-solarized/dircolors.256dark)
-
-
-if [[ $(uname) != *CYGWIN* ]] && [[ "$(lsb_release -si)" != "Ubuntu" ]]; then
-	if [[ "$(hostname -s)" == cada  ]]; then
-	  PROMPT_COMMAND='echo -ne "\033]0;local\007"'     
-	else
-	  PROMPT_COMMAND='echo -ne "\033]0;$(hostname -s)\007"'
-	fi
-fi
-
-# Set nice looking prompt for cygwin
-if [[ $(uname) = *CYGWIN* ]]; then
-  export PS1='\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\$ '
+if [[ "$(hostname -s)" == cada  ]]; then
+  # TODO Make this generic
+  PROMPT_COMMAND='export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "'
+else
+  PROMPT_COMMAND='export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "'
 fi
 
 
@@ -65,8 +57,6 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Save and reload the history after each command finishes
 
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-
-
 
 #tmuxinator stuff
 #[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

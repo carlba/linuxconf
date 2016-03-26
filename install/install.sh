@@ -2,6 +2,8 @@ dotfiles=~/dotfiles
 
 . $dotfiles/bashrc.d/global.sh
 
+tmp_dir=$(mktemp -d)
+
 in_array() {
     local hay needle=$1
     shift
@@ -189,6 +191,22 @@ ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc
 add_header
 
 #Dependencies
+
+# https://github.com/sickill/stderred
+
+add_header "Installing libstderred"
+if [[ ! -e "/usr/local/lib/libstderred.so" ]];then
+  pushd $tmp_dir > /dev/null
+  sudo apt-get install build-essential cmake
+  git clone git://github.com/sickill/stderred.git > /dev/null
+  cd stderred
+  make > /dev/null
+  popd > /dev/null
+else
+  echo "Already installed"
+fi
+add_header
+
 
 #Vim TabBar
 

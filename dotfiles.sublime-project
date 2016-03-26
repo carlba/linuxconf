@@ -2,6 +2,16 @@
 	"folders":
 	[
 		{
+			"folder_exclude_patterns":
+			[
+				".vim/autoload",
+				".vim/bundle",
+				".vim/colors",
+				".vim/doc",
+				".vim/ftplugin",
+				".vim/indent",
+				".vim/plugin"
+			],
 			"follow_symlinks": true,
 			"path": "."
 		}

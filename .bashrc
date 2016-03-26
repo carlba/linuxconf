@@ -29,7 +29,7 @@ if [ -f ~/dotfiles/.bash_aliases ]; then
 fi
 
 if [ -e ~/dotfiles/bashrc.d ]; then
-  for f in ~/dotfiles/bashrc.d/*; do    
+  for f in ~/dotfiles/bashrc.d/*; do
     . $f
   done
 fi

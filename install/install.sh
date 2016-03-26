@@ -110,7 +110,7 @@ git_setup() {
 ignore_files_setup()
 {
   #Handle ignore_files
-  ignore_files=(. .. .bashrc git_configuration.sh .gitmodules install linstall   README.md tmp.tmp deploy .git .ssh .config .local *.~* .profile dotfiles.sublime-project dotfiles.sublime-workspace)
+  ignore_files=(. .. .bashrc git_configuration.sh .gitmodules install linstall README.md tmp.tmp deploy .git .ssh .config .local *.~* .profile dotfiles.sublime-project dotfiles.sublime-workspace)
 
   if in_array xfce ${desktop_managers[*]}; then
     ignore_files+=(".mateconf")

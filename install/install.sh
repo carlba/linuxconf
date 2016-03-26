@@ -13,7 +13,7 @@ in_array() {
 
 add_header () {
   echo "===================================================="
-  echo -e "$green$1$end_color"
+  echo -e "$text_cyan$1$text_reset"
 }
 
 add_template () {
@@ -100,7 +100,7 @@ git_setup() {
   # Git
   # Update repo and all submodules
   pushd ~/dotfiles > /dev/null
-  echo -e "$green$(git submodule init)$end_color"
+  echo -e "$(git submodule init)"
   git submodule update > /dev/null
   git pull > /dev/null && git submodule update --init --recursive > /dev/null
   git submodule foreach --recursive git submodule update --init > /dev/null

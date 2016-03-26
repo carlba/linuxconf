@@ -137,10 +137,9 @@ ignore_files_setup()
 # Source my own .bashrc after the one in the system if it exists otherwise symlink the dotfiles one to the home directory.
 
 add_header "Adding template for .bashrc"
-
 add_template ".bashrc"
-add_header "Adding template for .profile"
 
+add_header "Adding template for .profile"
 add_template ".profile"
 
 #Preparations
@@ -172,7 +171,6 @@ install_file templates/dotfiles.sh /etc/profile.d/
 
 # Setup symlinks between dotfiles and home directory
 add_header "Going through all files in the dotfiles directory"
-
 loop_dir
 loop_dir .config
 

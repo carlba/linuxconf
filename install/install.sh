@@ -2,10 +2,6 @@ dotfiles=~/dotfiles
 
 . $dotfiles/bashrc.d/global.sh
 
-green='\e[0;32m' # '\e[1;32m' is too bright for white background.
-red='\e[1;31m'
-
-
 in_array() {
     local hay needle=$1
     shift
@@ -13,6 +9,11 @@ in_array() {
         [[ $hay == $needle ]] && return 0
     done
     return 1
+}
+
+add_header () {
+  echo "===================================================="
+  echo -e "$green$1$end_color"
 }
 
 add_template () {
@@ -103,7 +104,7 @@ git_setup() {
   git submodule update > /dev/null
   git pull > /dev/null && git submodule update --init --recursive > /dev/null
   git submodule foreach --recursive git submodule update --init > /dev/null
-  popd
+  popd > /dev/null
 }
 
 ignore_files_setup()
@@ -135,7 +136,11 @@ ignore_files_setup()
 
 # Source my own .bashrc after the one in the system if it exists otherwise symlink the dotfiles one to the home directory.
 
+add_header "Adding template for .bashrc"
+
 add_template ".bashrc"
+add_header "Adding template for .profile"
+
 add_template ".profile"
 
 #Preparations
@@ -145,22 +150,28 @@ if [[ $(uname -a) == *CYGWIN* ]]; then
   linux_env=cygwin
 fi
 
+add_header "Clearing vim swap files in home directory"
 clear_vim_swap $HOME
+
+add_header "Configuring git"
 git_setup
+
+add_header "Configuring ignore files array"
 ignore_files_setup
 
 #If update only the git setup will be done
 if [ "$1" == update ]; then
+  add_header "Update only mode no installations will be made"
   exit
 fi
 
 #Installing and copying files
 
-# Installing dotfiles.sh file
+add_header "Installing dotfiles.sh file"
 install_file templates/dotfiles.sh /etc/profile.d/
 
 # Setup symlinks between dotfiles and home directory
-echo -e "\n Going through all files in the dotfiles directory"
+add_header "Going through all files in the dotfiles directory"
 
 loop_dir
 loop_dir .config
@@ -170,15 +181,18 @@ if [[ "$linux_env" != cygwin ]] && [ -z "desktop_managers" ]; then
   loop_dir .local/share/applications
 fi
 
-#Handle special files
-#ssh.config
-ln -s ~/dotfiles/.ssh/config ~/.ssh/config
+# Handling of special files
+
+add_header "Handling of special files"
+add_header "SSH config file"
+[[ ! -e ~/.ssh/config ]] && ln -s ~/dotfiles/.ssh/config ~/.ssh/config
+add_header ".vimrc"
 ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc
+add_header
 
 #Dependencies
 
 #Vim TabBar
-
 
 if command_exists apt-get; then
   if command_exists sudo; then

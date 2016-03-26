@@ -2,7 +2,42 @@
 
 green='\e[0;32m' # '\e[1;32m' is too bright for white bg.
 red='\e[1;31m'
+red='\e[1;31m'
 end_color='\e[0m'
+
+text_black='\e[0;30m'             # Black - Regular
+text_red='\e[0;31m'               # Red
+text_green='\e[0;32m'             # Green
+text_yellow='\e[0;33m'            # Yellow
+text_blue='\e[0;34m'              # Blue
+text_purple='\e[0;35m'            # Purple
+text_cyan='\e[0;36m'              # Cyan
+text_white='\e[0;37m'             # White
+text_bold_black='\e[1;30m'        # Black - Bold
+text_bold_red='\e[1;31m'          # Red
+text_gold_green='\e[1;32m'        # Green
+text_bold_yellow='\e[1;33m'       # Yellow
+text_bold_blue='\e[1;34m'         # Blue
+text_bold_purple='\e[1;35m'       # Purple
+text_bold_cyan='\e[1;36m'         # Cyan
+text_bold_white='\e[1;37m'        # White
+text_underlne_kblk='\e[4;30m'     # Black - Underline
+text_underlne_dred='\e[4;31m'     # Red
+text_underlne_dgrn='\e[4;32m'     # Green
+text_underlne_dylw='\e[4;33m'     # Yellow
+text_underlne_dblu='\e[4;34m'     # Blue
+text_underlne_dpur='\e[4;35m'     # Purple
+text_underlne_dcyn='\e[4;36m'     # Cyan
+text_underlne_dwht='\e[4;37m'     # White
+text_background_black='\e[40m'    # Black - Background
+text_background_red='\e[41m'      # Red
+text_background_green='\e[42m'    # Green
+text_background_yellow='\e[43m'   # Yellow
+text_background_blue='\e[44m'     # Blue
+text_background_purple='\e[45m'   # Purple
+text_background_cyan='\e[46m'     # Cyan
+text_background_white='\e[47m'    # White
+text_reset='\e[0m'                # Text Reset
 
 
 function instr_file { 

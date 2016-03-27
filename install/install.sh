@@ -181,6 +181,7 @@ fi
 
 add_header "Handling of special files"
 add_header "SSH config file"
+[[ ! -d ~/.ssh ]] && mkdir ~/.ssh
 [[ ! -e ~/.ssh/config ]] && ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 add_header ".vimrc"
 ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc
@@ -190,6 +191,7 @@ add_header
 
 # https://github.com/sickill/stderred
 
+# TODO: Make CentOS compatible
 add_header "Installing libstderred"
 if [[ ! -e "/usr/local/lib/libstderred.so" ]] && [[ "$linux_env" != cygwin ]]; then
   pushd $tmp_dir > /dev/null

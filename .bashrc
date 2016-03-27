@@ -1,8 +1,6 @@
 # .bashrc
 
-export DOTFILES=~/dotfiles
-
-. $dotfiles/bashrc.d/global.sh
+. $DOTFILES/bashrc.d/global.sh
 
 # Keyboard shortcuts
 bind '"\e[5~": history-search-backward'

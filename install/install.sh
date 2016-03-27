@@ -202,6 +202,7 @@ if [[ ! -e "/usr/local/lib/libstderred.so" ]] && [[ "$linux_env" != cygwin ]]; t
     sudo yum -y groupinstall 'Development Tools' > /dev/null
     sudo yum -y install cmake > /dev/null
   fi
+  git clone git://github.com/sickill/stderred.git > /dev/null
   cd stderred
   make > /dev/null
   sudo make install /dev/null

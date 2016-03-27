@@ -195,7 +195,7 @@ add_header
 # https://github.com/sickill/stderred
 
 add_header "Installing libstderred"
-if [[ ! -e "/usr/local/lib/libstderred.so" ]];then
+if [[ ! -e "/usr/local/lib/libstderred.so" ]] && [[ "$linux_env" != cygwin ]]; then
   pushd $tmp_dir > /dev/null
   sudo apt-get install build-essential cmake
   git clone git://github.com/sickill/stderred.git > /dev/null

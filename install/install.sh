@@ -128,6 +128,7 @@ ignore_files_setup()
   fi
 
   # cli mode preset (preset for command line)
+  # TODO: CLI mode should always be active on CentOS
   if [ "$1" == climode ]; then
     ignore_files+=(.xchat2 .mateconf .config .local Desktop .komodoedit share applications icons)
   fi

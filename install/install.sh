@@ -195,10 +195,15 @@ add_header
 add_header "Installing libstderred"
 if [[ ! -e "/usr/local/lib/libstderred.so" ]] && [[ "$linux_env" != cygwin ]]; then
   pushd $tmp_dir > /dev/null
-  sudo apt-get install build-essential cmake
-  git clone git://github.com/sickill/stderred.git > /dev/null
+  if command_exists apt-get; then
+    sudo apt-get install build-essential cmake
+  else
+    sudo yum -y groupinstall 'Development Tools' > /dev/null
+    sudo yum -y install cmake > /dev/null
+  fi
   cd stderred
   make > /dev/null
+  sudo make install /dev/null
   popd > /dev/null
 else
   echo "Already installed"

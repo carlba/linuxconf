@@ -2,6 +2,8 @@
 
 export DOTFILES=~/dotfiles
 
+. $dotfiles/bashrc.d/global.sh
+
 # Keyboard shortcuts
 bind '"\e[5~": history-search-backward'
 bind '"\e[6~": history-search-forward'
@@ -34,7 +36,7 @@ if [ -e ~/dotfiles/bashrc.d ]; then
   done
 fi
 
-if command_exists lsb_release >/dev/null && [[ "$(lsb_release -si)" != "Ubuntu" ]]; then
+if [[ "$linux_env" =! ubuntu ]]; then
   PROMPT_COMMAND='export PS1="\[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "'
 fi
 

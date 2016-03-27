@@ -39,6 +39,11 @@ text_background_cyan='\e[46m'     # Cyan
 text_background_white='\e[47m'    # White
 text_reset='\e[0m'                # Text Reset
 
+if [[ $(uname -a) == *CYGWIN* ]]; then
+  linux_env=cygwin
+elif [[ $(uname -a) == *Ubuntu* ]]; then
+  linux_env=ubuntu
+fi
 
 function instr_file { 
   local needle="$1" 
@@ -103,7 +108,7 @@ function command_exists {
 	fi
 }
 
-clear_vim_swap() {  
+clear_vim_swap() {
   find $1 -mount -name "*~" -exec rm -rf {} \;
 }
 

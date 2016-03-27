@@ -147,10 +147,6 @@ add_template ".profile"
 #Preparations
 desktop_managers=($([ -d "/usr/share/xsessions" ] && find /usr/share/xsessions -name "*.desktop" -exec basename "{}" .desktop \;))
 
-if [[ $(uname -a) == *CYGWIN* ]]; then
-  linux_env=cygwin
-fi
-
 add_header "Clearing vim swap files in home directory"
 clear_vim_swap $HOME
 

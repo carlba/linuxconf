@@ -14,11 +14,11 @@ fi
 if [[ "$1" == "to" ]]; then
     $rsync_command $HOME/bsdev/gfk-http-collector $root_sync_path/bsdev --exclude venv
     $rsync_command $HOME/bsdev/analytics4 $root_sync_path/bsdev --exclude venv
-    $rsync_command $HOME/.PyCharm50 $root_sync_path
+    $rsync_command $HOME/.PyCharm2016.1 $root_sync_path
 fi
 
 if [[ "$1" == "from" ]];then
     $rsync_command $root_sync_path/bsdev/gfk-http-collector $HOME/bsdev  --exclude venv
     $rsync_command $root_sync_path/bsdev/analytics4 $HOME/bsdev --exclude venv
-    $rsync_command $root_sync_path/.PyCharm50 $HOME
+    $rsync_command $root_sync_path/.PyCharm2016.1 $HOME
 fi

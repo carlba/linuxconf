@@ -1,8 +1,22 @@
 #!/bin/bash
 
 #root_sync_path="/media/$(whoami)/DATA/backup"
+
 root_sync_path="$HOME/Dropbox/transfer"
-rsync_command="rsync -avd"
+rsync_command="rsync -ad --delete"
+
+
+function rsync_from_home_to_syncpath {
+    mkdir -p $(dirname "$root_sync_path/$1")
+    echo -e "\nSyncing $HOME/$1/ with $root_sync_path/$1/"
+    $rsync_command $HOME/$1/ $root_sync_path/$1/ --exclude venv
+}
+
+function rsync_from_syncpath_to_home {
+    mkdir -p $(dirname "$HOME/$1")
+    echo -e "\nSyncing $root_sync_path/$1/ with $HOME/$1/"
+    $rsync_command "$root_sync_path/$1/" "$HOME/$1/" --exclude venv
+}
 
 mkdir -p $root_sync_path/bsdev
 
@@ -12,13 +26,21 @@ if [[ "$#" -eq 0 ]]; then
 fi
 
 if [[ "$1" == "to" ]]; then
-    $rsync_command $HOME/bsdev/gfk-http-collector $root_sync_path/bsdev --exclude venv
-    $rsync_command $HOME/bsdev/analytics4 $root_sync_path/bsdev --exclude venv
-    $rsync_command $HOME/.PyCharm2016.1 $root_sync_path
+    rsync_from_home_to_syncpath "bsdev/analytics4"
+    rsync_from_home_to_syncpath "bsdev/gfk-http-collector"    
+    rsync_from_home_to_syncpath ".PyCharm2016.1"
+    rsync_from_home_to_syncpath ".gconf/apps/guake"
+    rsync_from_home_to_syncpath ".config/doublecmd"
+    rsync_from_home_to_syncpath ".config/kupfer"
+    rsync_from_home_to_syncpath ".smartgit"
 fi
 
 if [[ "$1" == "from" ]];then
-    $rsync_command $root_sync_path/bsdev/gfk-http-collector $HOME/bsdev  --exclude venv
-    $rsync_command $root_sync_path/bsdev/analytics4 $HOME/bsdev --exclude venv
-    $rsync_command $root_sync_path/.PyCharm2016.1 $HOME
+    rsync_from_syncpath_to_home "bsdev/analytics4"
+    rsync_from_syncpath_to_home "bsdev/gfk-http-collector"    
+    rsync_from_syncpath_to_home ".PyCharm2016.1"
+    rsync_from_syncpath_to_home ".gconf/apps/guake"
+    rsync_from_syncpath_to_home ".config/doublecmd/"
+    rsync_from_syncpath_to_home ".config/kupfer"
+    rsync_from_syncpath_to_home ".smartgit"
 fi

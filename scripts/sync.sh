@@ -25,6 +25,8 @@ if [[ "$#" -eq 0 ]]; then
   exit 1
 fi
 
+[[ ! -d "$root_sync_path" ]] && echo "$root_sync_path doesn't exist. Dropbox is probably not installed" && exit 1 
+
 if [[ "$1" == "to" ]]; then
     rsync_from_home_to_syncpath "bsdev/analytics4"
     rsync_from_home_to_syncpath "bsdev/credentials"

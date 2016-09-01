@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/pyflakes-vim"]
 	path = .vim/bundle/pyflakes-vim
 	url = git://github.com/kevinw/pyflakes-vim.git
+[submodule "dircolors-zenburn"]
+	path = dircolors-zenburn
+	url = https://github.com/ivoarch/dircolors-zenburn

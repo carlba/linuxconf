@@ -12,4 +12,5 @@ alias screenoff="xset -display :0.0 dpms force off"
 alias dudefault="du -hx --max-depth=1 | sort -hr | head"
 alias isodate='date "+%Y-%m-%d"'
 alias clipdate='date "+%Y-%m-%d" | xargs echo -n | tee >(xclip) >(xclip -sel c) > /dev/null'
+alias tmuxify='tmux new -s cada || tmux at -t cada'
 

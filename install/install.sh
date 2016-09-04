@@ -190,29 +190,6 @@ add_header
 
 #Dependencies
 
-# https://github.com/sickill/stderred
-
-# TODO: Make CentOS compatible
-add_header "Installing libstderred"
-if [[ ! -e "/usr/local/lib/libstderred.so" ]] && [[ "$linux_env" != cygwin ]]; then
-  pushd $tmp_dir > /dev/null
-  if command_exists apt-get; then
-    sudo apt-get install build-essential cmake
-  else
-    sudo yum -y groupinstall 'Development Tools' > /dev/null
-    sudo yum -y install cmake > /dev/null
-  fi
-  git clone git://github.com/sickill/stderred.git > /dev/null
-  cd stderred
-  make > /dev/null
-  sudo make install /dev/null
-  popd > /dev/null
-else
-  echo "Already installed"
-fi
-add_header
-
-
 #Vim TabBar
 
 if command_exists apt-get; then

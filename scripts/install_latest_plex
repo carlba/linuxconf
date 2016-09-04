@@ -1,0 +1,1 @@
+/usr/bin/curl -L -o /tmp/plex.deb "https://plex.tv/downloads/latest/1?channel=16&build=linux-ubuntu-x86_64&distro=ubuntu&X-Plex-Token=L2CSmyxFDm7pctHSy2Ds"; /usr/bin/sudo /usr/bin/dpkg -i /tmp/plex.deb;/bin/rm -rf /tmp/plex.deb

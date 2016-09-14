@@ -1,7 +1,4 @@
 # Aliases
-alias tunneltowork='ssh -f trillian.birdstep.com -L 2222:enterprise.d.birdstep.internal:22 -N'
-alias tunneltohome='ssh -f root@carlb.dyndns.org -L 8080:localhost:80 -L 9091:localhost:9091 -N'
-
 alias gitmodified="git status -s | awk '{if (\$1 == \"M\") print \$2}'"
 alias dump="links http://wiki.carl.lambdaworks.se/index.php/dump"
 alias updatehosts="hoststohostsfile ~/dotfiles/hosts"

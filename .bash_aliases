@@ -13,4 +13,4 @@ alias dudefault="du -hx --max-depth=1 | sort -hr | head"
 alias isodate='date "+%Y-%m-%d"'
 alias clipdate='date "+%Y-%m-%d" | xargs echo -n | tee >(xclip) >(xclip -sel c) > /dev/null'
 alias tmuxify='tmux new -s cada || tmux at -t cada'
-
+alias i3lockify='find /home/cada/Dropbox/Data/wallpapers -name "*" | python -c "import sys;import random; print(random.choice(sys.stdin.readlines()).rstrip())" | xargs -I{} convert {} /tmp/wallpaper.png; i3lock -t -i /tmp/wallpaper.png'

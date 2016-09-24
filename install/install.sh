@@ -1,3 +1,4 @@
+#!/bin/bash
 dotfiles=~/dotfiles
 
 . $dotfiles/bashrc.d/global.sh

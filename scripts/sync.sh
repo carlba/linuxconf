@@ -1,11 +1,7 @@
 #!/bin/bash
 
-#root_sync_path="/media/$(whoami)/DATA/backup"
-
-sync_path="Dropbox/transfer"
 root_sync_path="$HOME/Dropbox/transfer"
 rsync_command="rsync -ad --delete"
-find_command=""
 
 function rsync_from_home_to_syncpath {
     mkdir -p $(dirname "$root_sync_path/$1")

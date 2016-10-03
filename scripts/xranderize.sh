@@ -5,5 +5,5 @@ if [ "$(hostname)" = "uburken" ]
     xrandr --output DVI-I-1 --auto  --rotate normal  --dpi 65 --output HDMI-1 --auto --rotate left --primary --right-of DVI-I-1  --dpi 65
 elif [ "$(hostname)" = "cadathink" ]
   then
-    echo "test"
+    xrandr --output DP2 --auto  --rotate normal  --dpi 65 --output HDMI3 --auto --rotate left --primary --right-of DP2  --dpi 65 --output LVDS1 --off
 fi

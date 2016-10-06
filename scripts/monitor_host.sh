@@ -12,7 +12,7 @@ for host in $(cat ${hostsfile})
 do
   if is_host_online $host; then
     echo -e "${green}${host}${endColor}"
-  else    
+  else
     echo -e "${red}$host${endColor}"
   fi
 done

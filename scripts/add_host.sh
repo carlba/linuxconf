@@ -6,4 +6,3 @@ if [ $# -eq 0 ]; then
 fi
 
 echo "$2 $1" | sudo tee -a /etc/hosts
-

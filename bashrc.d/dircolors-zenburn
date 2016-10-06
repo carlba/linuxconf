@@ -1,0 +1,3 @@
+eval $( dircolors -b $HOME/dotfiles/dircolors-zenburn/dircolors )
+alias dir='dir --color'
+alias ls='ls --color'

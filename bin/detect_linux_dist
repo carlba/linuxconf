@@ -23,8 +23,8 @@ elif [ -f /etc/arch-release ] ; then
   _dist='Arch'
 fi
 
-if [ -z $_dist ] ; then
+if [ -z ${_dist} ] ; then
   echo 'Could not detect Linux Distribution. exit. ' >&2
   exit 1
 fi
-echo -n $_dist
+echo -n ${_dist}

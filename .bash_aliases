@@ -2,7 +2,6 @@
 alias gitmodified="git status -s | awk '{if (\$1 == \"M\") print \$2}'"
 alias dump="links http://wiki.carl.lambdaworks.se/index.php/dump"
 alias updatehosts="hoststohostsfile ~/dotfiles/hosts"
-alias fenixwiki="/opt/google/chrome/google-chrome --app=http://wiki.carl.lambdaworks.se/index.php/Main_Page"
 alias pingtest="ping ping.birdstep.com"
 alias getextip="curl http://wtfismyip.com/text"
 alias screenoff="xset -display :0.0 dpms force off"

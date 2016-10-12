@@ -23,6 +23,7 @@ if not os.geteuid() == 0:
 else:
     updatedb()
 
+
 @click.group()
 def cli():
     pass

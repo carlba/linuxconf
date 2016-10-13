@@ -33,7 +33,7 @@ def _sync(sync_mappings):
     for from_path, to_path in sync_mappings:
         to_path.mkdir(parents=True, exist_ok=True)
         rsync('-ad', from_path.as_posix() + '/', to_path.as_posix() + '/',
-              delete=True, exclude 'venv')
+              delete=True, exclude='venv')
 
 
 def _print_sync_mappings(sync_mappings):
@@ -42,7 +42,6 @@ def _print_sync_mappings(sync_mappings):
 
 
 @cli.command()
-@click.option('--host', help='The file will only be synced with this host')
 def store():
     """
     Stores all directories in the filesystem that contains a .sync file to the configured

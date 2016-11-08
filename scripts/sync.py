@@ -14,7 +14,7 @@ from pathlib2 import Path
 
 root_sync_path = "/home/cada/Dropbox/transfer"
 excludes = {'/media/Windows/Users/genzo/Dropbox/transfer', '.cache', 'VirtualBox VMs',
-            'Downloads', '.vagrant.d', '.dropbox', 'venv', 'Videos', 'Dropbox'}
+            'Downloads', '.vagrant.d', '.dropbox', 'venv', 'Videos'}
 
 @click.group()
 def cli():

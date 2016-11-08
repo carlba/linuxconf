@@ -10,3 +10,4 @@ alias clipdate='date "+%Y-%m-%d" | xargs echo -n | tee >(xclip) >(xclip -sel c) 
 alias tmuxify='tmux new -s cada || tmux at -t cada'
 alias i3lockify='find /home/cada/Dropbox/data/wallpapers -name "*" | python -c "import sys;import random; print(random.choice(sys.stdin.readlines()).rstrip())" | xargs -I{} convert {} /tmp/wallpaper.png; i3lock -t -i /tmp/wallpaper.png'
 alias screenoff='xset dpms force off'
+alias xranderize1='xrandr --output DP2 --off  --output HDMI3 --off --output LVDS1 --auto'

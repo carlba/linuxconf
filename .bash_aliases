@@ -1,8 +1,6 @@
 # Aliases
 alias gitmodified="git status -s | awk '{if (\$1 == \"M\") print \$2}'"
-alias dump="links http://wiki.carl.lambdaworks.se/index.php/dump"
 alias updatehosts="hoststohostsfile ~/dotfiles/hosts"
-alias pingtest="ping ping.birdstep.com"
 alias getextip="curl http://wtfismyip.com/text"
 alias dudefault="du -hx --max-depth=1 | sort -hr | head"
 alias isodate='date "+%Y-%m-%d"'

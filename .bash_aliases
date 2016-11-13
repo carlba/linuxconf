@@ -1,3 +1,4 @@
+#!/bin/bash
 # Aliases
 alias gitmodified="git status -s | awk '{if (\$1 == \"M\") print \$2}'"
 alias updatehosts="hoststohostsfile ~/dotfiles/hosts"

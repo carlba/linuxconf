@@ -18,6 +18,7 @@ root_sync_path = "/home/cada/Dropbox/transfer"
 excludes = {'/media/Windows/Users/genzo/Dropbox/transfer', '.cache', 'VirtualBox VMs',
             'Downloads', '.vagrant.d', '.dropbox', 'venv', 'Videos'}
 
+
 @click.group()
 def cli():
     pass
@@ -61,8 +62,6 @@ def store():
     dropbox.start_dropbox()
 
 
-
-
 @cli.command()
 def load():
     """
@@ -70,7 +69,7 @@ def load():
     matching path in the filesystem
     """
 
-    sync_paths = _get_sync_paths(root_sync_path,excludes)
+    sync_paths = _get_sync_paths(root_sync_path, excludes)
     sync_mappings = [(path, Path('/') / path.relative_to(root_sync_path))
                      for path in sync_paths]
     _print_sync_mappings(sync_mappings)

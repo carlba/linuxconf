@@ -4,9 +4,11 @@
 
 import click
 from click.testing import CliRunner
-from scandir import  walk
-from sh import rsync
+from scandir import walk
+from sh import rsync, wget
 from pathlib2 import Path
+import dropbox
+
 
 # http://click.pocoo.org/5/commands/
 # https://pathlib.readthedocs.io/en/pep428/
@@ -49,12 +51,16 @@ def store():
     ``root_sync_path``
 
     """
-
+    wget('-O', 'dropbox.py', 'https://www.dropbox.com/download?dl=packages/dropbox.py')
+    dropbox.start_dropbox()
     sync_paths = _get_sync_paths('/home/cada', excludes | {root_sync_path})
     sync_mappings = [(path, Path(root_sync_path) / path.relative_to('/'))
                      for path in sync_paths]
     _print_sync_mappings(sync_mappings)
     _sync(sync_mappings)
+    dropbox.start_dropbox()
+
+
 
 
 @cli.command()
@@ -64,7 +70,7 @@ def load():
     matching path in the filesystem
     """
 
-    sync_paths = _get_sync_paths(root_sync_path,excludes)    
+    sync_paths = _get_sync_paths(root_sync_path,excludes)
     sync_mappings = [(path, Path('/') / path.relative_to(root_sync_path))
                      for path in sync_paths]
     _print_sync_mappings(sync_mappings)
